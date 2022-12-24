@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Notes on Blackpaper</title>
-    <link>https://tumberger.github.io/tags/notes/</link>
+    <link>https://blackpaper.info/tags/notes/</link>
     <description>Recent content in Notes on Blackpaper</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>©Jens</copyright>
-    <lastBuildDate>Fri, 23 Dec 2022 15:38:40 +0100</lastBuildDate><atom:link href="https://tumberger.github.io/tags/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 Dec 2022 15:38:40 +0100</lastBuildDate><atom:link href="https://blackpaper.info/tags/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dedicated Verifier Zero-Knowledge Proofs</title>
-      <link>https://tumberger.github.io/posts/my-first-post/</link>
+      <link>https://blackpaper.info/posts/my-first-post/</link>
       <pubDate>Fri, 23 Dec 2022 15:38:40 +0100</pubDate>
       
-      <guid>https://tumberger.github.io/posts/my-first-post/</guid>
+      <guid>https://blackpaper.info/posts/my-first-post/</guid>
       <description>Introduction This is bold text, and this is emphasized text.
 Visit the Hugo website!
 KaTeX can be used to generate complex math formulas server-side.</description>
