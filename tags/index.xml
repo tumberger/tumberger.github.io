@@ -6,25 +6,6 @@
     <description>Recent content in Tags on Blackpaper</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>©Jens</copyright>
-    <lastBuildDate>Fri, 23 Dec 2022 15:38:40 +0100</lastBuildDate><atom:link href="https://blackpaper.info/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Notes</title>
-      <link>https://blackpaper.info/tags/notes/</link>
-      <pubDate>Fri, 23 Dec 2022 15:38:40 +0100</pubDate>
-      
-      <guid>https://blackpaper.info/tags/notes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Zero-Knowledge</title>
-      <link>https://blackpaper.info/tags/zero-knowledge/</link>
-      <pubDate>Fri, 23 Dec 2022 15:38:40 +0100</pubDate>
-      
-      <guid>https://blackpaper.info/tags/zero-knowledge/</guid>
-      <description></description>
-    </item>
-    
+    <copyright>©Jens</copyright><atom:link href="https://blackpaper.info/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
