@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blackpaper</title>
-    <link>http://example.org/</link>
+    <link>https://blackpaper.info/</link>
     <description>Recent content on Blackpaper</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>©Jens</copyright>
-    <lastBuildDate>Sun, 05 Feb 2023 10:38:40 +0100</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 Feb 2023 10:38:40 +0100</lastBuildDate><atom:link href="https://blackpaper.info/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Recursive SNARKs and Pairing friendly Elliptic Curves</title>
-      <link>http://example.org/posts/ellipticcurves/</link>
+      <link>https://blackpaper.info/posts/ellipticcurves/</link>
       <pubDate>Sun, 05 Feb 2023 10:38:40 +0100</pubDate>
       
-      <guid>http://example.org/posts/ellipticcurves/</guid>
+      <guid>https://blackpaper.info/posts/ellipticcurves/</guid>
       <description>In recent years, SNARKs proliferated themselves as a potential privacy and scaling solution for permissionless blockchains. However, due to the complexity of underlying cryptography and mathematical constructions, SNARKs are hard to grasp for application oriented computer scientists and hardware developers.</description>
     </item>
     
     <item>
       <title>About</title>
-      <link>http://example.org/about/</link>
+      <link>https://blackpaper.info/about/</link>
       <pubDate>Fri, 23 Dec 2022 15:38:40 +0100</pubDate>
       
-      <guid>http://example.org/about/</guid>
+      <guid>https://blackpaper.info/about/</guid>
       <description>Authors Jens Ernstberger I&amp;rsquo;m Jens, currently a PhD student at Technical University of Munich under the supervision of Prof. Dr. Sebastian Steinhorst.</description>
     </item>
     
