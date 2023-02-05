@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Blackpaper</title>
-    <link>http://example.org/posts/</link>
-    <description>Recent content in Posts on Blackpaper</description>
+    <title>Recursive SNARKs on Blackpaper</title>
+    <link>http://example.org/tags/recursive-snarks/</link>
+    <description>Recent content in Recursive SNARKs on Blackpaper</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>©Jens</copyright>
-    <lastBuildDate>Sun, 05 Feb 2023 10:38:40 +0100</lastBuildDate><atom:link href="http://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 Feb 2023 10:38:40 +0100</lastBuildDate><atom:link href="http://example.org/tags/recursive-snarks/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Recursive SNARKs and Pairing friendly Elliptic Curves</title>
       <link>http://example.org/posts/ellipticcurves/</link>
