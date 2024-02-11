@@ -2,7 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://blackpaper.info/publications/publication1/</loc>
+    <loc>https://blackpaper.info/publications/censorship/</loc>
+    <lastmod>2024-02-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blackpaper.info/publications/zkp/</loc>
     <lastmod>2024-02-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blackpaper.info/</loc>
@@ -11,7 +14,19 @@
     <loc>https://blackpaper.info/publications/</loc>
     <lastmod>2024-02-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blackpaper.info/publications/publication2/</loc>
+    <loc>https://blackpaper.info/publications/janus/</loc>
+    <lastmod>2023-02-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blackpaper.info/publications/liquidation/</loc>
+    <lastmod>2023-02-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blackpaper.info/publications/datasovereignty/</loc>
+    <lastmod>2023-02-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blackpaper.info/publications/defisok/</loc>
+    <lastmod>2023-02-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blackpaper.info/publications/zkbench/</loc>
     <lastmod>2023-02-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blackpaper.info/tags/elliptic-curves/</loc>
@@ -34,5 +49,8 @@
   </url><url>
     <loc>https://blackpaper.info/about/</loc>
     <lastmod>2022-12-23T15:38:40+01:00</lastmod>
+  </url><url>
+    <loc>https://blackpaper.info/publications/apoa/</loc>
+    <lastmod>2021-02-11T00:00:00+00:00</lastmod>
   </url>
 </urlset>
