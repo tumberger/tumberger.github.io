@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications on Jens Ernstberger</title>
+    <link>https://blackpaper.info/publications/</link>
+    <description>Recent content in Publications on Jens Ernstberger</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>©Jens</copyright>
+    <lastBuildDate>Sun, 11 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://blackpaper.info/publications/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blockchain Censorship</title>
+      <link>https://blackpaper.info/publications/publication1/</link>
+      <pubDate>Sun, 11 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://blackpaper.info/publications/publication1/</guid>
+      <description>Brief summary or abstract of the publication&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Mitigating Decentralized Finance Liquidations with Reversible Call Options</title>
+      <link>https://blackpaper.info/publications/publication2/</link>
+      <pubDate>Sat, 11 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://blackpaper.info/publications/publication2/</guid>
+      <description>Brief summary or abstract of the publication&amp;hellip;</description>
+    </item>
+    
+  </channel>
+</rss>

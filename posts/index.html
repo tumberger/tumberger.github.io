@@ -2,8 +2,8 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Posts - Blackpaper</title><link rel="icon" type="image/png" href=icons/myicon.png /><meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="alternate" type="application/rss+xml" href="https://blackpaper.info/posts/index.xml" title="Blackpaper" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Posts - Jens Ernstberger</title><link rel="icon" type="image/png" href=icons/myicon.png /><meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="alternate" type="application/rss+xml" href="https://blackpaper.info/posts/index.xml" title="Jens Ernstberger" />
 	<meta property="og:title" content="Posts" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
@@ -26,14 +26,13 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
 
-
 <body>
-	<div class="container wrapper list">
-		<div class="header">
+    <div class="container wrapper">
+        <div class="header">
 	<base href="https://blackpaper.info/">
-	<h1 class="site-title"><a href="https://blackpaper.info/">Blackpaper</a></h1>
-	<div class="site-description"><h2>A space for structured thoughts on the decentralized web.</h2><nav class="nav social">
-			<ul class="flat"><a href="https://github.com/tumberger" title="Github"><i data-feather="github"></i></a><a href="https://mobile.twitter.com/ernstbergerjens" title="Twitter"><i data-feather="twitter"></i></a></ul>
+	<h1 class="site-title"><a href="https://blackpaper.info/">Jens Ernstberger</a></h1>
+	<div class="site-description"><h2></h2><nav class="nav social">
+			<ul class="flat"><a href="https://github.com/tumberger" title="Github"><i data-feather="github"></i></a><a href="https://mobile.twitter.com/0xSerious" title="Twitter"><i data-feather="twitter"></i></a></ul>
 		</nav>
 	</div>
 
@@ -45,11 +44,11 @@
 			</li>
 			
 			<li>
-				<a href="/posts">All posts</a>
+				<a href="/publications">Publications</a>
 			</li>
 			
 			<li>
-				<a href="/about">About</a>
+				<a href="/posts">Blog</a>
 			</li>
 			
 			<li>
@@ -60,18 +59,31 @@
 	</nav>
 </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 
-		
-			<h1 class="page-title">All articles</h1>
-		
+        <div class="recent-posts section">
+            <h2 class="section-header">
+                Recent Posts
+            </h2>
+            <div class="posts">
+                
+                
+                
+                <div class="post">
+                    <div class="meta">Feb 5, 2023</div>
+                    <a class="title" href="/posts/ellipticcurves/">Recursive SNARKs and Pairing friendly Elliptic Curves</a> &mdash;
+                    <span class="description">
+                        
+                        In recent years, SNARKs proliferated themselves as a potential privacy and scaling solution for permissionless blockchains. However, due to the complexity of underlying cryptography and mathematical constructions, SNARKs are hard to grasp for application oriented computer scientists and hardware developers.&hellip;
+                        
+                    </span>
+                </div>
+                
+                
 
-		
 
-		<ul class="posts"><li class="post">
-				<a href="/posts/ellipticcurves/">Recursive SNARKs and Pairing friendly Elliptic Curves</a> <span class="meta">Feb 5, 2023</span>
-			</li></ul>
-	</div>
-
-	<div class="footer wrapper">
+            </div>
+        </div>
+    </div>
+    <div class="footer wrapper">
 	<nav class="nav">
 		<div> ©Jens </a></div>
 	</nav>
@@ -98,5 +110,4 @@ if (!doNotTrack) {
 <script> hljs.initHighlightingOnLoad(); </script>
 <script> renderMathInElement(document.body); </script>
 </body>
-
 </html>
