@@ -69,30 +69,61 @@
 			<p>In recent years, SNARKs proliferated themselves as a potential privacy and scaling solution for permissionless blockchains.
 However, due to the complexity of underlying cryptography and mathematical constructions, SNARKs are  hard to grasp for application oriented computer scientists and hardware developers.
 In this article, we will give a short introduction to pairing-friendly elliptic curves and how the choice of elliptic curve influences the feasability of constructing a <em>recursive</em> SNARK, a primitive of primary interest for especially for rollups and incrementally verifiable computation (IVC).</p>
-<h3 id="introduction-to-pairing-friendly-elliptic-curves">Introduction to pairing-friendly elliptic curves</h3>
-<p>// TODO</p>
-<h3 id="recursive-verification-of-snarks-trusted-setup-without-polynomial-commitments">Recursive Verification of SNARKs (trusted setup without polynomial commitments)</h3>
-<p>Common SNARKs that solely perform proof generation, verification and setup over arithmetic in the groups  \( \mathbb{G}_1, \mathbb{G}_2 , \mathbb{G}_T \)  are e.g., <a href="https://link.springer.com/article/10.1007/s00453-016-0221-0">BCTV14a</a>, <a href="https://eprint.iacr.org/2016/260.pdf">Groth16</a>, <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7163030&amp;casa_token=aGDdFf3QdEQAAAAA:Nv-osnQnvKIYwKWw118p9daWoZdbjXqhFe-6dar7cpeT8kFsFZF7nKr27Zpp5LXSvE4Uyvl7pEM">CFH+15</a>.
-Succinctness in proof size and verification make SNARKs ideal for recursive verificiation, such that a second SNARK prover verifies the verification algorithm of a preceding SNARK.
-By doing so, applications such as <a href="https://polygon.technology/blog/zkverse-deep-dive-into-polygon-hermez-2-0">zk-Rollups</a> can be facilitated in practice.
-However, naively implementing recursion with the same SNARK leads to inefficient implementation.</p>
-<p>In the following we assume a pairing-friendly curve  \(E\) which has a bilinear map<br>
-$$\mathbb{G}_1, \mathbb{G}_2 \xrightarrow{} \mathbb{G}_T$$
-where \(\mathbb{G}_1\), \(\mathbb{G}_2\) are distinct prime-order \(r\) subgroups of \(E\), and \(\mathbb{G}_T \subset \mathbb{F}_q \) of the same order \(r\).</p>
-<p>We assume SNARKs where a prover operates in the scalar field \(\mathbb{F}_r\) and the verifiers checks the generated proofs in the extension field  \(\mathbb{F}_q\) of the curves base field.
-In particular, the reason why recursive verification is costly in a naive approach in this setting is so-called <em>non-native field arithemtic</em>, where operations in \(\mathbb{F}_r\) need to be simulated in \(\mathbb{F}_q\) , which is expensive (remember that SNARKs verify proofs with bilinear pairings \(\mathbb{G}_1, \mathbb{G}_2 \xrightarrow{} \mathbb{G}_T\)).</p>
+<h2 id="1-mathematical-background"><strong>1. Mathematical Background</strong></h2>
+<p>Let&rsquo;s shortly revise the background on elliptic curves, under the assumption that the reader is familiar with the basics of finite fields (for a more detailed discussion of elliptic curves in the context of recursive SNARKs, the <a href="https://yelhousni.github.io/phd.pdf">PhD Thesis</a> of Youssef El Housni does an excellent job at providing a detailed background on elliptic curves).</p>
+<p>We denote \(\mathbb{F}_p\) as a finite field for some prime \(p &gt; 3\).
+Elliptic curves over finite fields form the basis for various cryptographic protocols.
+A typical elliptic curve can be expressed in the following equation (also termed <a href="https://crypto.stanford.edu/pbc/notes/elliptic/weier.html">Short Weierstrass Form</a>):</p>
+<p>\(y^2=x^3+a \cdot x+b\)</p>
+<p>where \(a\) and \(b\) are coefficients in \(\mathbb{F}_p\) that satisfy the condition \(4 \cdot a^3 + 27 \cdot b^2 \neq 0\) to ensure that there are no singular points (cusps or self-intersections) on the curve.</p>
+<p>These curves have a set of points, denoted \(E(\mathbb{F}_p)\), which includes all solutions to the curve equation over \(\mathbb{F}_p\)​ along with a special &lsquo;point at infinity&rsquo;. This set forms an abelian group under addition.
+Pairing-friendly elliptic curves are a special class of elliptic curves that facilitate the computation of <em>bilinear pairings</em>.
+The pairing operation enables novel cryptographic schemes that could not be built from discrete logarithm groups.
+On a high level, a bilinear pairing is a mapping that take two points from specific groups related to elliptic curves and output an element in a finite field, shortly denoted as \( e: \mathbb{G}_1 \times \mathbb{G}_2 \rightarrow \mathbb{G}_T \).
+Here, \(\mathbb{G}_1\), \(\mathbb{G}_2\) are distinct prime-order \(r\) subgroups of \(E\), and \(\mathbb{G}_T \subset \mathbb{F}_q \) of the same order \(r\).</p>
+<p>Pairing-friendly curves are chosen for their ability to compute these pairings efficiently, a property that not all elliptic curves possess.
+This efficient computation is crucial in applications like recursive SNARKs, where the cryptographic strength and efficiency of pairings directly impact the overall system&rsquo;s performance and security.
+The most common elliptic curves used in cryptographic applications, particularly in the context of pairings and advanced cryptographic protocols, are the BN254 and BLS12-381 curves.
+Whereas BN254 is defined over a 256-bits prime field, BLS12-381 is defined over a 381-bits prime field.
+Due to a larger prime field, BLS12-381 is ought to be more secure, whereas operations like Scalar Multiplication are also less efficient (see e.g. practical benchmarks in <a href="https://eprint.iacr.org/2023/1503.pdf">our paper</a>).</p>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
+<h2 id="2-recursion-and-incrementally-verifiable-computation"><strong>2. Recursion and Incrementally Verifiable Computation</strong></h2>
+<h3 id="21-incrementally-verifiable-computation">2.1 Incrementally Verifiable Computation</h3>
+<p>Incrementally Verifiable Computation (IVC) targets the verification of long-running computations.
+Initially, this concept was introduced by Valiant in 2008 <a href="https://citeseerx.ist.psu.edu/document?repid=rep1&amp;type=pdf&amp;doi=1759d16b8b702ca1cd5a6102d7791279c8b64d84">Val08</a>.
+Formally, an IVC proof proves tha the \(i\)-th step of a computation was executed correctly, and there exists a proof that the computation was executed correctly for all \(i − 1\) previous steps, i.e. it holds that \(F(z_{i-1}) = z_i\), where \(F\) is the function applied at the  \(i\)-th step, and there exists a proof \(\pi_{i-1}\) that attests to the correctness of \(z_{i-1}\).</p>
+<p><img src="../images/IVC.jpg" alt="Alternative Text">
+<em><strong>Figure 1: Visualization of Incrementally Verifiable Computation</strong></em></p>
 <!-- raw HTML omitted -->
-<p>One could choose an elliptic curve \(E\) where \(q = r\) , but this yields a trivial discrete logarithm problem in \(E\) (for a detailed discussion, see <a href="https://yelhousni.github.io/phd.pdf">here</a>).
-Practical solutions for this problem leverage cycles of elliptic curves, as first demonstrated by Ben-Sasson et. al <a href="https://link.springer.com/article/10.1007/s00453-016-0221-0">BCTV14a</a>.</p>
-<!-- raw HTML omitted -->
-<p>This approaches leverage the fact that for the cycles of applied elliptic curves, the base field of either curve is the scalar field of the other.
+<h3 id="22-recursion-overhead">2.2 Recursion Overhead</h3>
+<p>Now, the overhead of recursive verification is simple - at each step, the prover needs to additionally verify the previous proof, i.e. the relation includes the circuit to be proven AND the circuit for verifiying the proof produced in the previous step.
+Hence, inital proposals for recursive SNARKs relied on state-of-the-art succinct SNARKs, where the verification involves only a minimal amount of operations.
+There is an additional caveat though, as for pairing-based SNARKs rely on elliptic curves have a differing scalar and base field, i.e. the prover operates over a different field than the verifier.
+In particular, prover operates in the scalar field \(\mathbb{F}_r\) and the verifiers checks the generated proofs in the extension field  \(\mathbb{F}_q\) of the curves base field.
+The reason why recursive verification is costly in a naive approach in this setting is so-called <em>non-native field arithemtic</em>, where operations in \(\mathbb{F}_r\) need to be simulated in \(\mathbb{F}_q\) , which is expensive (remember that SNARKs verify proofs with bilinear pairings \(\mathbb{G}_1, \mathbb{G}_2 \xrightarrow{} \mathbb{G}_T\)).
+One could choose an elliptic curve \(E\) where \(q = r\) , but this yields a trivial discrete logarithm problem in \(E\).</p>
+<h3 id="23-practical-recursion-over-cycles-and-2-chains-of-elliptic-curves">2.3 Practical Recursion over Cycles and 2-Chains of Elliptic Curves</h3>
+<p>Practical solutions circumvent this caveat by leveraging <em>cycles of elliptic curves</em>, as first demonstrated by Ben-Sasson et. al <a href="https://link.springer.com/article/10.1007/s00453-016-0221-0">BCTV14a</a>.
+This approaches leverage the fact that for the cycles of applied elliptic curves, the base field of either curve is the scalar field of the other.
 However, only curves MNT4/6 (of embedding degree 4 or 6) achieve this property, which requires the use of large fields \(~(&raquo; r~)\) to achieve adequate security.
-In <a href="https://eprint.iacr.org/2018/962.pdf?ref=hackernoon.com">ZEXE</a>, the authors circumvent this issue by constructing new curves (BLS12-377/ CP6-782, cmp. Fig.16 in <a href="https://eprint.iacr.org/2018/962.pdf?ref=hackernoon.com">ZEXE</a>), which form a chain rather than a cycle - hence, only the base field of one curve is equivalent to the scalar field of the other, but not the other way around.</p>
-<p>Recent work has <a href="https://hal.inria.fr/hal-03371573/document">shown</a> that that the BLS12 and BLS24 based families are respectively tailored for Groth’16 and KZG-based SNARKs recursive proof composition.</p>
-<h3 id="recursive-verification-of-snarks-universal-setup-with-polynomial-commitments">Recursive Verification of SNARKs (universal setup with polynomial commitments)</h3>
-<p>// TODO</p>
+In <a href="https://eprint.iacr.org/2018/962.pdf?ref=hackernoon.com">ZEXE</a>, the authors circumvent this issue by constructing new curves (BLS12-377/ CP6-782, cmp. Fig.16 in <a href="https://eprint.iacr.org/2018/962.pdf?ref=hackernoon.com">ZEXE</a>), which form a chain rather than a cycle - hence, only the base field of one curve is equivalent to the scalar field of the other, but not the other way around.
+A similar approach has been taken in <a href="https://eprint.iacr.org/2022/1286.pdf">Zebra</a>, which instantiates the inner SNARK with discrete log based <a href="https://eprint.iacr.org/2019/550.pdf">Spartan</a> over the <a href="https://hackmd.io/@aztec-network/ByzgNxBfd">Grumpkin Curve</a> and the outer SNARK with <a href="https://eprint.iacr.org/2016/260.pdf">Groth16</a> over BN254. BN254 and Grumpkin form a cycle of elliptic curves and hence faciliate recursion without the need for emulation of non-native arithmetic. BN254 has pre-compiles on Ethereum, and hence proofs can be verified efficiently in a smart contract.
+Recent work has further <a href="https://hal.inria.fr/hal-03371573/document">shown</a> that the BLS12 and BLS24 based families can be tailored for Groth’16 and KZG-based SNARKs recursive proof composition.</p>
+<p>However, it turns out that this is not sufficient, and one can do better (see Section 3). Many SNARKs do not satisfy the requirement of succinct verification, and if they do they rely on trusted setups that have to be run in a pre-processing step.
+Further, pairing-based SNARKs involve a verification algorithm that relies on operations in elliptic curves (i.e. <a href="https://eprint.iacr.org/2016/260.pdf">Groth16</a> involves 3 pairings for verifying a proof), and for recursive verification these operations need to be emulated in an arithmetic circuit (e.g. R1CS), which is prohibitively expensive.</p>
+<h2 id="3-recursion-without-succinct-arguments"><strong>3. Recursion without Succinct Arguments</strong></h2>
+<p>To be added soon</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 
 		</div>
 
