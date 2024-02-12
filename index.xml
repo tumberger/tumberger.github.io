@@ -2,99 +2,99 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jens Ernstberger</title>
-    <link>https://blackpaper.info/</link>
+    <link>https://ernstberger.xyz/</link>
     <description>Recent content on Jens Ernstberger</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>©Jens</copyright>
-    <lastBuildDate>Sun, 11 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://blackpaper.info/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 11 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://ernstberger.xyz/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blockchain Censorship</title>
-      <link>https://blackpaper.info/publications/censorship/</link>
+      <link>https://ernstberger.xyz/publications/censorship/</link>
       <pubDate>Sun, 11 Feb 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://blackpaper.info/publications/censorship/</guid>
+      <guid>https://ernstberger.xyz/publications/censorship/</guid>
       <description>Brief summary or abstract of the publication&amp;hellip;</description>
     </item>
     
     <item>
       <title>Do You Need a Zero Knowledge Proof?</title>
-      <link>https://blackpaper.info/publications/zkp/</link>
+      <link>https://ernstberger.xyz/publications/zkp/</link>
       <pubDate>Sun, 11 Feb 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://blackpaper.info/publications/zkp/</guid>
+      <guid>https://ernstberger.xyz/publications/zkp/</guid>
       <description>Brief summary or abstract of the publication&amp;hellip;</description>
     </item>
     
     <item>
       <title>Janus: Fast Privacy-Preserving Data Provenance For TLS 1.3</title>
-      <link>https://blackpaper.info/publications/janus/</link>
+      <link>https://ernstberger.xyz/publications/janus/</link>
       <pubDate>Sat, 11 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://blackpaper.info/publications/janus/</guid>
+      <guid>https://ernstberger.xyz/publications/janus/</guid>
       <description>Brief summary or abstract of the publication&amp;hellip;</description>
     </item>
     
     <item>
       <title>Mitigating Decentralized Finance Liquidations with Reversible Call Options</title>
-      <link>https://blackpaper.info/publications/liquidation/</link>
+      <link>https://ernstberger.xyz/publications/liquidation/</link>
       <pubDate>Sat, 11 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://blackpaper.info/publications/liquidation/</guid>
+      <guid>https://ernstberger.xyz/publications/liquidation/</guid>
       <description>Brief summary or abstract of the publication&amp;hellip;</description>
     </item>
     
     <item>
       <title>SoK: Data Sovereignty</title>
-      <link>https://blackpaper.info/publications/datasovereignty/</link>
+      <link>https://ernstberger.xyz/publications/datasovereignty/</link>
       <pubDate>Sat, 11 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://blackpaper.info/publications/datasovereignty/</guid>
+      <guid>https://ernstberger.xyz/publications/datasovereignty/</guid>
       <description>Brief summary or abstract of the publication&amp;hellip;</description>
     </item>
     
     <item>
       <title>SoK: Decentralized Finance (DeFi) Attacks</title>
-      <link>https://blackpaper.info/publications/defisok/</link>
+      <link>https://ernstberger.xyz/publications/defisok/</link>
       <pubDate>Sat, 11 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://blackpaper.info/publications/defisok/</guid>
+      <guid>https://ernstberger.xyz/publications/defisok/</guid>
       <description>Brief summary or abstract of the publication&amp;hellip;</description>
     </item>
     
     <item>
       <title>zk-Bench: A Toolset for Comparative Evaluation and Performance Benchmarking of SNARKs</title>
-      <link>https://blackpaper.info/publications/zkbench/</link>
+      <link>https://ernstberger.xyz/publications/zkbench/</link>
       <pubDate>Sat, 11 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://blackpaper.info/publications/zkbench/</guid>
+      <guid>https://ernstberger.xyz/publications/zkbench/</guid>
       <description>Brief summary or abstract of the publication&amp;hellip;</description>
     </item>
     
     <item>
       <title>Recursive SNARKs and Pairing friendly Elliptic Curves</title>
-      <link>https://blackpaper.info/posts/ellipticcurves/</link>
+      <link>https://ernstberger.xyz/posts/ellipticcurves/</link>
       <pubDate>Sun, 05 Feb 2023 10:38:40 +0100</pubDate>
       
-      <guid>https://blackpaper.info/posts/ellipticcurves/</guid>
+      <guid>https://ernstberger.xyz/posts/ellipticcurves/</guid>
       <description>In recent years, SNARKs proliferated themselves as a potential privacy and scaling solution for permissionless blockchains. However, due to the complexity of underlying cryptography and mathematical constructions, SNARKs are hard to grasp for application oriented computer scientists and hardware developers.</description>
     </item>
     
     <item>
       <title>About</title>
-      <link>https://blackpaper.info/about/</link>
+      <link>https://ernstberger.xyz/about/</link>
       <pubDate>Fri, 23 Dec 2022 15:38:40 +0100</pubDate>
       
-      <guid>https://blackpaper.info/about/</guid>
+      <guid>https://ernstberger.xyz/about/</guid>
       <description>Hi! I&amp;rsquo;m Jens. I&amp;rsquo;m a PhD student at Technical University of Munich under the supervision of Prof. Dr. Sebastian Steinhorst.</description>
     </item>
     
     <item>
       <title>A-poa: Anonymous proof of authorization for decentralized identity management</title>
-      <link>https://blackpaper.info/publications/apoa/</link>
+      <link>https://ernstberger.xyz/publications/apoa/</link>
       <pubDate>Thu, 11 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://blackpaper.info/publications/apoa/</guid>
+      <guid>https://ernstberger.xyz/publications/apoa/</guid>
       <description>Brief summary or abstract of the publication&amp;hellip;</description>
     </item>
     

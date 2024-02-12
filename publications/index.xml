@@ -2,81 +2,81 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Publications on Jens Ernstberger</title>
-    <link>https://blackpaper.info/publications/</link>
+    <link>https://ernstberger.xyz/publications/</link>
     <description>Recent content in Publications on Jens Ernstberger</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>©Jens</copyright>
-    <lastBuildDate>Sun, 11 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://blackpaper.info/publications/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 11 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://ernstberger.xyz/publications/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blockchain Censorship</title>
-      <link>https://blackpaper.info/publications/censorship/</link>
+      <link>https://ernstberger.xyz/publications/censorship/</link>
       <pubDate>Sun, 11 Feb 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://blackpaper.info/publications/censorship/</guid>
+      <guid>https://ernstberger.xyz/publications/censorship/</guid>
       <description>Brief summary or abstract of the publication&amp;hellip;</description>
     </item>
     
     <item>
       <title>Do You Need a Zero Knowledge Proof?</title>
-      <link>https://blackpaper.info/publications/zkp/</link>
+      <link>https://ernstberger.xyz/publications/zkp/</link>
       <pubDate>Sun, 11 Feb 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://blackpaper.info/publications/zkp/</guid>
+      <guid>https://ernstberger.xyz/publications/zkp/</guid>
       <description>Brief summary or abstract of the publication&amp;hellip;</description>
     </item>
     
     <item>
       <title>Janus: Fast Privacy-Preserving Data Provenance For TLS 1.3</title>
-      <link>https://blackpaper.info/publications/janus/</link>
+      <link>https://ernstberger.xyz/publications/janus/</link>
       <pubDate>Sat, 11 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://blackpaper.info/publications/janus/</guid>
+      <guid>https://ernstberger.xyz/publications/janus/</guid>
       <description>Brief summary or abstract of the publication&amp;hellip;</description>
     </item>
     
     <item>
       <title>Mitigating Decentralized Finance Liquidations with Reversible Call Options</title>
-      <link>https://blackpaper.info/publications/liquidation/</link>
+      <link>https://ernstberger.xyz/publications/liquidation/</link>
       <pubDate>Sat, 11 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://blackpaper.info/publications/liquidation/</guid>
+      <guid>https://ernstberger.xyz/publications/liquidation/</guid>
       <description>Brief summary or abstract of the publication&amp;hellip;</description>
     </item>
     
     <item>
       <title>SoK: Data Sovereignty</title>
-      <link>https://blackpaper.info/publications/datasovereignty/</link>
+      <link>https://ernstberger.xyz/publications/datasovereignty/</link>
       <pubDate>Sat, 11 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://blackpaper.info/publications/datasovereignty/</guid>
+      <guid>https://ernstberger.xyz/publications/datasovereignty/</guid>
       <description>Brief summary or abstract of the publication&amp;hellip;</description>
     </item>
     
     <item>
       <title>SoK: Decentralized Finance (DeFi) Attacks</title>
-      <link>https://blackpaper.info/publications/defisok/</link>
+      <link>https://ernstberger.xyz/publications/defisok/</link>
       <pubDate>Sat, 11 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://blackpaper.info/publications/defisok/</guid>
+      <guid>https://ernstberger.xyz/publications/defisok/</guid>
       <description>Brief summary or abstract of the publication&amp;hellip;</description>
     </item>
     
     <item>
       <title>zk-Bench: A Toolset for Comparative Evaluation and Performance Benchmarking of SNARKs</title>
-      <link>https://blackpaper.info/publications/zkbench/</link>
+      <link>https://ernstberger.xyz/publications/zkbench/</link>
       <pubDate>Sat, 11 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://blackpaper.info/publications/zkbench/</guid>
+      <guid>https://ernstberger.xyz/publications/zkbench/</guid>
       <description>Brief summary or abstract of the publication&amp;hellip;</description>
     </item>
     
     <item>
       <title>A-poa: Anonymous proof of authorization for decentralized identity management</title>
-      <link>https://blackpaper.info/publications/apoa/</link>
+      <link>https://ernstberger.xyz/publications/apoa/</link>
       <pubDate>Thu, 11 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://blackpaper.info/publications/apoa/</guid>
+      <guid>https://ernstberger.xyz/publications/apoa/</guid>
       <description>Brief summary or abstract of the publication&amp;hellip;</description>
     </item>
     
