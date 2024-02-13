@@ -1,7 +1,6 @@
 body {
-    font-family: "Lucida Console", "Courier New", monospace;
+    font-family: "Times New Roman", Times, serif;
     font-weight: 400;
-    color: #333;
     line-height: 1.6;
     font-size: 14px;
 }
@@ -97,22 +96,22 @@ a:hover {
 }
 
 h1,h2,h3,h4,h5,h6 {
-    font-family: "Lucida Console", "Courier New", monospace;
+    font-family: "Times New Roman", Times, serif;
     line-height: 1.2;
     color: #333;
     font-weight: 200;
 }
 
 h1 {
-    font-size: 2.75rem;
-}
-
-h2 {
     font-size: 2rem;
 }
 
-h3 {
+h2 {
     font-size: 1.6rem;
+}
+
+h3 {
+    font-size: 1.2rem;
 }
 
 h4 {
@@ -271,10 +270,10 @@ pre code {
 }
 
 .section .section-header {
-    font-size: 0.75rem;
+    font-size: 1rem;
     font-weight: 600;
     text-transform: uppercase;
-    color: #999;
+    color: #333;
     margin-bottom: 20px;
     letter-spacing: 1px;
 }
@@ -287,7 +286,7 @@ pre code {
 .post .post-header .meta,
 .list .posts .post .meta {
     font-size: 0.725rem;
-    color: #999;
+    color: #333;
     margin-bottom: 4px;
 }
 
@@ -442,34 +441,42 @@ table th, table td {
 
 .publications-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     gap: 20px;
 }
 
+@media screen and (max-width: 767px) { /* Adjust the max-width as needed for your mobile breakpoint */
+    .publications-list {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+
 .publication {
     /* background-color: #fff; */
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    padding: 2px;
+    /* border: 0px solid #ddd;
+    border-radius: 0px; */
 }
 
 .publication-meta {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: 2px;
 }
 
 .venue {
-    font-weight: bold;
-    color: #007bff;
+    /* font-weight: bold; */
+    color: #a00;
 }
 
 .publication-title {
     font-size: 18px;
+    font-weight: bold;
 }
 
 .authors {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-style: italic;
     color: #666;
 }
@@ -477,7 +484,7 @@ table th, table td {
 .read-more {
     display: inline-block;
     padding: 5px 10px;
-    background-color: #007bff;
+    background-color: #a00;
     color: #fff;
     border-radius: 4px;
     text-decoration: none;
@@ -494,14 +501,25 @@ table th, table td {
     font-weight: bold;
 }
 
+/* Media query for mobile devices */
+@media screen and (max-width: 767px) {
+    .publication .abbreviation {
+        padding: 1px 4px; /* smaller padding */
+        font-size: smaller; /* smaller font size */
+        border-radius: 2px; /* smaller border radius */
+        margin-left: 3px; /* smaller margin */
+        /* You can adjust the above values as needed */
+    }
+}
+
 .publication .tier1 {
-    background-color: red;
+    background-color: rgb(144, 12, 12);
     color: white;
 }
 
 .publication .tier2 {
-    background-color: yellow;
-    color: black;
+    background-color: #988901;
+    color: white;
 }
 
 .publication .tier3 {

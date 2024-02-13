@@ -6,7 +6,6 @@
     <description>Recent content on Jens Ernstberger</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>©Jens</copyright>
     <lastBuildDate>Sun, 11 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://ernstberger.xyz/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blockchain Censorship</title>
@@ -24,6 +23,15 @@
       
       <guid>https://ernstberger.xyz/publications/zkp/</guid>
       <description>Brief summary or abstract of the publication&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Recursive SNARKs and Pairing friendly Elliptic Curves</title>
+      <link>https://ernstberger.xyz/posts/ellipticcurves/</link>
+      <pubDate>Mon, 05 Feb 2024 10:38:40 +0100</pubDate>
+      
+      <guid>https://ernstberger.xyz/posts/ellipticcurves/</guid>
+      <description>In recent years, SNARKs proliferated themselves as a potential privacy and scaling solution for permissionless blockchains. However, due to the complexity of underlying cryptography and mathematical constructions, SNARKs are hard to grasp for application oriented computer scientists and hardware developers.</description>
     </item>
     
     <item>
@@ -69,15 +77,6 @@
       
       <guid>https://ernstberger.xyz/publications/zkbench/</guid>
       <description>Brief summary or abstract of the publication&amp;hellip;</description>
-    </item>
-    
-    <item>
-      <title>Recursive SNARKs and Pairing friendly Elliptic Curves</title>
-      <link>https://ernstberger.xyz/posts/ellipticcurves/</link>
-      <pubDate>Sun, 05 Feb 2023 10:38:40 +0100</pubDate>
-      
-      <guid>https://ernstberger.xyz/posts/ellipticcurves/</guid>
-      <description>In recent years, SNARKs proliferated themselves as a potential privacy and scaling solution for permissionless blockchains. However, due to the complexity of underlying cryptography and mathematical constructions, SNARKs are hard to grasp for application oriented computer scientists and hardware developers.</description>
     </item>
     
     <item>
