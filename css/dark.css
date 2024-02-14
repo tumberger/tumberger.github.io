@@ -3,6 +3,122 @@ body {
 	background-color: #ddd;
 }
 
+body.dark-theme {
+    /* Dark theme styles */
+    background-color: #333;
+    color: white;
+    /* other dark theme styles */
+}
+
+body.dark-theme {
+    /* Dark theme styles */
+    background-color: #1e1e1e; /* Darker background */
+    color: #c7c7c7; /* Lighter text color */
+}
+
+/* Selection color in dark theme */
+body.dark-theme ::-moz-selection {
+    background: #555;
+    color: white;
+}
+
+body.dark-theme ::selection {
+    background: #555;
+    color: white;
+}
+
+/* Horizontal rule color */
+body.dark-theme hr {
+    border-color: #555;
+}
+
+/* Blockquote border color */
+body.dark-theme blockquote {
+	border-color: #555;
+}
+
+/* Headings color */
+body.dark-theme h1, body.dark-theme h2, body.dark-theme h3, body.dark-theme h4, body.dark-theme h5, body.dark-theme h6 {
+	color: #ddd;
+}
+
+/* Link colors */
+body.dark-theme a, body.dark-theme a:hover {
+	color: #9eadff; /* Lighter color for links */
+}
+
+body.dark-theme .site-description a,
+body.dark-theme .site-description a:hover {
+	color: #ddd;
+	text-decoration: underline;
+}
+
+body.dark-theme a:hover {
+	opacity: 0.9;
+}
+
+/* Tag styles */
+body.dark-theme .post-tags .tags a {
+    border: 1px solid #555;
+	color: #ddd;
+}
+
+/* Site title color */
+body.dark-theme .site-title a {
+	color: #ddd;
+}
+
+/* Header and footer border color */
+body.dark-theme .header nav,
+body.dark-theme .footer {
+	border-color: #555;
+}
+
+/* Highlight background color */
+body.dark-theme .highlight {
+	background-color: #444;
+}
+
+/* Table header color */
+body.dark-theme table th {
+	background-color: #444;
+	color: #ddd;
+}
+
+/* Table cells */
+body.dark-theme table th, body.dark-theme table td {
+    padding: 10px 20px;
+    border: 1px solid #555;
+}
+
+/* Preformatted text */
+body.dark-theme pre code {
+  display: inline-block;
+  background-color: #333; /* Dark background for code blocks */
+  color: #c7c7c7; /* Light text for code blocks */
+}
+
+body.dark-theme .venue {
+    color: #9eadff;
+}
+
+body.dark-theme .section .section-header {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #ddd;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+body.dark-theme .recent-posts .posts .post .meta,
+.post .post-header .meta,
+.list .posts .post .meta {
+    font-size: 0.725rem;
+    color: #ddd;
+    margin-bottom: 4px;
+}
+
 ::-moz-selection {
     background: #666;
     text-shadow: none
