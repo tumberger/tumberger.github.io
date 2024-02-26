@@ -1,16 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
+	
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R2NJMVSSYH"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-R2NJMVSSYH', { 'anonymize_ip': false });
+}
+</script>
+
+  	
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-R2NJMVSSYH', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Recursive SNARKs and Pairing friendly Elliptic Curves - Jens Ernstberger</title><link rel="icon" type="image/png" href=icons/myicon.png /><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta property="og:title" content="Recursive SNARKs and Pairing friendly Elliptic Curves" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Revisiting Elliptic Curves, Recursive SNARKs and Folding Schemes - Jens Ernstberger</title><link rel="icon" type="image/png" href=icons/myicon.png /><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="Revisiting Elliptic Curves, Recursive SNARKs and Folding Schemes" />
 <meta property="og:description" content="In recent years, SNARKs proliferated themselves as a potential privacy and scaling solution for permissionless blockchains. However, due to the complexity of underlying cryptography and mathematical constructions, SNARKs are hard to grasp for application oriented computer scientists and hardware developers." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ernstberger.xyz/posts/ellipticcurves/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-02-05T10:38:40+01:00" />
 <meta property="article:modified_time" content="2024-02-05T10:38:40+01:00" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Recursive SNARKs and Pairing friendly Elliptic Curves"/>
+<meta name="twitter:title" content="Revisiting Elliptic Curves, Recursive SNARKs and Folding Schemes"/>
 <meta name="twitter:description" content="In recent years, SNARKs proliferated themselves as a potential privacy and scaling solution for permissionless blockchains. However, due to the complexity of underlying cryptography and mathematical constructions, SNARKs are hard to grasp for application oriented computer scientists and hardware developers."/>
 <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
 
@@ -90,7 +114,7 @@
 </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 
 		<div class="post-header">
-			<h1 class="title">Recursive SNARKs and Pairing friendly Elliptic Curves</h1>
+			<h1 class="title">Revisiting Elliptic Curves, Recursive SNARKs and Folding Schemes</h1>
 			<div class="meta">Posted at &mdash; Feb 5, 2024</div>
 		</div>
 
@@ -127,8 +151,8 @@ Formally, an IVC proof proves tha the \(i\)-th step of a computation was execute
 <!-- raw HTML omitted -->
 <h3 id="22-recursion-overhead">2.2 Recursion Overhead</h3>
 <p>Now, the overhead of recursive verification is simple - at each step, the prover needs to additionally verify the previous proof, i.e. the relation includes the circuit to be proven AND the circuit for verifiying the proof produced in the previous step.
-Hence, inital proposals for recursive SNARKs relied on state-of-the-art succinct SNARKs, where the verification involves only a minimal amount of operations.
-There is an additional caveat though, as for pairing-based SNARKs rely on elliptic curves have a differing scalar and base field, i.e. the prover operates over a different field than the verifier.
+Hence, inital proposals for recursive SNARKs relied on state-of-the-art succinct SNARKs, where the verification involves only a minimal amount of operations (to minimize the recursion overhead).
+There is an additional caveat though, as pairing-based SNARKs that rely on elliptic curves have a differing scalar and base field, i.e. the prover operates over a different field than the verifier.
 In particular, prover operates in the scalar field \(\mathbb{F}_r\) and the verifiers checks the generated proofs in the extension field  \(\mathbb{F}_q\) of the curves base field.
 The reason why recursive verification is costly in a naive approach in this setting is so-called <em>non-native field arithemtic</em>, where operations in \(\mathbb{F}_r\) need to be simulated in \(\mathbb{F}_q\) , which is expensive (remember that SNARKs verify proofs with bilinear pairings \(\mathbb{G}_1, \mathbb{G}_2 \xrightarrow{} \mathbb{G}_T\)).
 One could choose an elliptic curve \(E\) where \(q = r\) , but this yields a trivial discrete logarithm problem in \(E\).</p>
@@ -140,9 +164,54 @@ In <a href="https://eprint.iacr.org/2018/962.pdf?ref=hackernoon.com">ZEXE</a>, t
 A similar approach has been taken in <a href="https://eprint.iacr.org/2022/1286.pdf">Zebra</a>, which instantiates the inner SNARK with discrete log based <a href="https://eprint.iacr.org/2019/550.pdf">Spartan</a> over the <a href="https://hackmd.io/@aztec-network/ByzgNxBfd">Grumpkin Curve</a> and the outer SNARK with <a href="https://eprint.iacr.org/2016/260.pdf">Groth16</a> over BN254. BN254 and Grumpkin form a cycle of elliptic curves and hence faciliate recursion without the need for emulation of non-native arithmetic. BN254 has pre-compiles on Ethereum, and hence proofs can be verified efficiently in a smart contract.
 Recent work has further <a href="https://hal.inria.fr/hal-03371573/document">shown</a> that the BLS12 and BLS24 based families can be tailored for Groth’16 and KZG-based SNARKs recursive proof composition.</p>
 <p>However, it turns out that this is not sufficient, and one can do better (see Section 3). Many SNARKs do not satisfy the requirement of succinct verification, and if they do they rely on trusted setups that have to be run in a pre-processing step.
-Further, pairing-based SNARKs involve a verification algorithm that relies on operations in elliptic curves (i.e. <a href="https://eprint.iacr.org/2016/260.pdf">Groth16</a> involves 3 pairings for verifying a proof), and for recursive verification these operations need to be emulated in an arithmetic circuit (e.g. R1CS), which is prohibitively expensive.</p>
+Further, pairing-based SNARKs involve a verification algorithm that relies on operations in elliptic curves (i.e. <a href="https://eprint.iacr.org/2016/260.pdf">Groth16</a> involves 3 pairings for verifying a proof), and for recursive verification these operations need to be emulated in an arithmetic circuit (e.g. R1CS), which is prohibitively expensive. Hence, requiring a SNARK with a sublinear-time verifier significantly restricts the practicability of IVC, and PCD, in practice.</p>
 <h2 id="3-recursion-without-succinct-arguments"><strong>3. Recursion without Succinct Arguments</strong></h2>
-<p>To be added soon</p>
+<p>Weakening the requirement of sublinear-time verifier SNARKs led to the development of recursive arguments of knowledge from <em>accumulation schemes</em> (<a href="https://eprint.iacr.org/2020/1618.pdf">BCLMS20</a>, <a href="https://eprint.iacr.org/2021/370.pdf">Nova</a>).
+At a high-level, an accumulation scheme requires the SNARK to be accompanied by an “accumulator“  that is updated at each recursion step and enables “postponing” the verification of SNARK proofs to the last step in the recursive chain of arguments (Benedikt Bunz covers the BCLMS20 construction for split-accumulation in detail in <a href="https://www.youtube.com/watch?v=CY84j0_E7KA">this presentation</a>).
+In the following, we will skip a bunch of related works that construct IVC from <em>atomic</em> accumulation as they still require SNARKs with sublinear verification, and further FFT-friendly cycles of elliptic curves (<a href="">BCMS20</a>, <a href="">Halo</a>).
+The idea is roughly the same as for split-accumulation <a href="https://eprint.iacr.org/2020/1618.pdf">BCLMS20</a> (also termed <em>folding</em> since <a href="https://eprint.iacr.org/2021/370.pdf">Nova</a>) &ndash; the utilized proof system is transparent, and the verifier has two tasks: (i)</p>
+<h3 id="31-nova---an-argument-system-based-on-a-folding-scheme-without-the-requirement-for-succinct-arguments">3.1 NOVA - An argument system based on a folding scheme without the requirement for Succinct Arguments</h3>
+<h4 id="311-preliminaries--overview">3.1.1 Preliminaries &amp; Overview</h4>
+<p>In the following, consider that \(F\) describes the relation that we want to prove at each step (i.e., Nova describes <em>uniform</em> IVC, where the computation at each step is the same).
+Nova relies on a variant fo R1CS for arithmetization, hence recall that an R1CS instance is defined as \(A,B,C \in \mathbb{F}^{n \times n}\) such that \(F(x)=y\) iff there exists a vector \(z \coloneqq (x,y,w)\) for a witness \(w\) such that \( (A \cdot z) \circ (B \cdot z) = C \cdot z \). Note, that \(\cdot\) denotes the matrix-vector product and \(\circ\) denotes the entrywise (&ldquo;Hadamard&rdquo;) product.
+In the case of IVC, where \(F^{(i)}\) is the i-th step, this is equivalent to proving that \(F^{(i)}(x)=y\) with \(z \coloneqq (y_{i-1},y_i,w_i)\) and \( (A_i \cdot z) \circ (B_i \cdot z) = C_i \cdot z \).</p>
+<p>Now, Nova describes &ldquo;folding&rdquo;, i.e. at each step of the IVC two R1CS instances are &ldquo;folded&rdquo; into a single R1CS instance, which then is again folded with another R1CS instance and so on (this is only roughly true, as folding two R1CS instances yields an error vector, which we will cover in 3.1.2).
+Trivially, one can fold two instances of uniform computations at each step. However, extensions of Nova support folding of non-uniform computations, allowing for efficient parallelization as described in <a href="https://hackmd.io/@monyverse/H1XSVmHNh">this post on using IVC for zkVM</a>.
+Each iterative step thereby does not compute the verification of the previous proof, which would be expensive.
+Rather, Nova levereages the additive homomorphism of additively homomorphic vector commitments (i.e. Pedersen Vector Commitment) to</p>
+<h4 id="312-folding-scheme">3.1.2 Folding Scheme</h4>
+<p>In principle, a folding scheme is rather trivial to construct. As you will see, opposing to the common belief that binomial eqquations are useless after high school, they are quite helpful to construct a folding scheme!</p>
+<!-- raw HTML omitted -->
+<p>At a high-level, a folding scheme leverages nothing besides the fact that one can combine tow algebraic R1CS instances \(z_1 \coloneqq (x_1,1,w_1)\) and \(z_2 \coloneqq (x_2,1,w_2)\) by computing their random linear combination (with a small quirk to account for errors).
+Now, we first show (i) the need for an error vector and (ii) how to use <em>cross-terms</em> as a valid error vector to enforce soundness of the argument system.</p>
+<p><strong>(i) Naive Approach.</strong>
+The naive approach, without correction for errors, would be to compute</p>
+<p>\(x \xleftarrow{} x_1 + r \cdot x_2\)</p>
+<p>\(w \xleftarrow{} w_1 + r \cdot w_2\)</p>
+<p>and successively set \(z \coloneqq (x,1,w)\). Now, this doesn&rsquo;t quite work as</p>
+<p>\((A \cdot z) \circ (B \cdot z)\) = \((A \cdot (z_1 + r \cdot z_2)) \circ (B \cdot (z_1 + r \cdot z_2)) \)</p>
+<p>\(= A \cdot z_1 \circ B \cdot z_1 + r \cdot (A \cdot z_1 \circ B \cdot z_2 + A \cdot z_2 \circ B \cdot z_1) + r^2 \cdot (A \cdot z_2 \circ B \cdot z_2)\)</p>
+<p>\(\neq C \cdot z\)</p>
+<p>The problem here is that our random linear combination introduces a cross-term that we need to account for (This is the part \(r \cdot (\textit{long term})\)).
+Further, even if we eliminate the cross-term, the constant and quadratic part of our equation still doesn&rsquo;t yield the correct result \(C \cdot z\).</p>
+<p><strong>(ii) Introducing Scaling and Error.</strong>
+Now assume we introduce to additional vectors \(u\) and \(E\), such the prover claims validity of a <em>relaxed</em> R1CS of the form \( (A \cdot z) \circ (B \cdot z) = u \cdot (C \cdot z) + E \).
+We would like to show that</p>
+<p>\( (A \cdot z) \circ (B \cdot z) = u \cdot (C \cdot z) + E \)</p>
+<p>holds, if and only if BOTH of the following equations hold:</p>
+<p>\( (A \cdot z_1) \circ (B \cdot z_1) = u \cdot (C \cdot z_1) + E \)</p>
+<p>\( (A \cdot z_2) \circ (B \cdot z_2) = u \cdot (C \cdot z_2) + E \)</p>
+<p>To do so, when folding two of these relaxed instances, we define our updated scaling and error vectors as random linear combinations of the form:</p>
+<p>\(u \xleftarrow{} u_1 + r \cdot u_2\)</p>
+<p>\(E \xleftarrow{} E_1 + r \cdot T + r^2 \cdot E_2\)</p>
+<p>where</p>
+<p>\(T = (A \cdot z_1) \circ (B \cdot z_2) + (A \cdot z_2) \circ (B \cdot z_1) - u_1 \cdot C \cdot z_2 - u_2 \cdot C \cdot z_1\)</p>
+<p>Now, it can be shown that \( (A \cdot z) \circ (B \cdot z) = u \cdot (C \cdot z) + E \) holds for every choice of \(r \in \mathbb{F}\) by simple algebraic deduction (feel free to have a look at the <a href="https://people.cs.georgetown.edu/jthaler/ProofsArgsAndZK.pdf">book</a> of Justin Thaler where this algebraic relation is proven on page 290).
+Note, that it is important for the prover to commit to the cross-term \(T\) before receiving the randomness \(r\) by the verifier.</p>
+<h4 id="313-building-ivc-from-a-folding-scheme-with-narks">3.1.3 Building IVC from a folding scheme with NARKs</h4>
+<p>Great, now we already know how to take two R1CS instances at one step of a computation and fold them into a single instance.
+It remains to construct a concrete scheme that provides IVC, by combining the folding scheme with an argument of knowledge.</p>
+<p>ToDo - Explain how to construct IVC</p>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
