@@ -6,7 +6,25 @@
     <description>Recent content on Jens Ernstberger</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 11 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://ernstberger.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 11 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://ernstberger.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Zero-Knowledge Location Privacy via Accurate Floating Point SNARKs</title>
+      <link>https://ernstberger.xyz/publications/zklp/</link>
+      <pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://ernstberger.xyz/publications/zklp/</guid>
+      <description>Brief summary or abstract of the publication&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>SoK: What don&#39;t we know? Understanding Security Vulnerabilities in SNARKs</title>
+      <link>https://ernstberger.xyz/publications/zksok/</link>
+      <pubDate>Mon, 11 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://ernstberger.xyz/publications/zksok/</guid>
+      <description>Brief summary or abstract of the publication&amp;hellip;</description>
+    </item>
+    
     <item>
       <title>Blockchain Censorship</title>
       <link>https://ernstberger.xyz/publications/censorship/</link>
@@ -22,6 +40,15 @@
       <pubDate>Sun, 11 Feb 2024 00:00:00 +0000</pubDate>
       
       <guid>https://ernstberger.xyz/publications/zkp/</guid>
+      <description>Brief summary or abstract of the publication&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>ORIGO: Proving Provenance of Sensitive Data with Constant Communication</title>
+      <link>https://ernstberger.xyz/publications/origo/</link>
+      <pubDate>Sun, 11 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://ernstberger.xyz/publications/origo/</guid>
       <description>Brief summary or abstract of the publication&amp;hellip;</description>
     </item>
     
@@ -85,7 +112,7 @@
       <pubDate>Fri, 23 Dec 2022 15:38:40 +0100</pubDate>
       
       <guid>https://ernstberger.xyz/about/</guid>
-      <description>Hi! I&amp;rsquo;m Jens. I&amp;rsquo;m a PhD student at Technical University of Munich under the supervision of Prof. Dr. Sebastian Steinhorst.</description>
+      <description>Hi! I&amp;rsquo;m Jens. I&amp;rsquo;m a researcher with primary interest at the intersection of cryptography and computer security. My main focus is on applications of cryptographic proof systems and secure computation.</description>
     </item>
     
     <item>

@@ -6,7 +6,25 @@
     <description>Recent content in Publications on Jens Ernstberger</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 11 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://ernstberger.xyz/publications/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 11 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://ernstberger.xyz/publications/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Zero-Knowledge Location Privacy via Accurate Floating Point SNARKs</title>
+      <link>https://ernstberger.xyz/publications/zklp/</link>
+      <pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://ernstberger.xyz/publications/zklp/</guid>
+      <description>Brief summary or abstract of the publication&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>SoK: What don&#39;t we know? Understanding Security Vulnerabilities in SNARKs</title>
+      <link>https://ernstberger.xyz/publications/zksok/</link>
+      <pubDate>Mon, 11 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://ernstberger.xyz/publications/zksok/</guid>
+      <description>Brief summary or abstract of the publication&amp;hellip;</description>
+    </item>
+    
     <item>
       <title>Blockchain Censorship</title>
       <link>https://ernstberger.xyz/publications/censorship/</link>
@@ -22,6 +40,15 @@
       <pubDate>Sun, 11 Feb 2024 00:00:00 +0000</pubDate>
       
       <guid>https://ernstberger.xyz/publications/zkp/</guid>
+      <description>Brief summary or abstract of the publication&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>ORIGO: Proving Provenance of Sensitive Data with Constant Communication</title>
+      <link>https://ernstberger.xyz/publications/origo/</link>
+      <pubDate>Sun, 11 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://ernstberger.xyz/publications/origo/</guid>
       <description>Brief summary or abstract of the publication&amp;hellip;</description>
     </item>
     
