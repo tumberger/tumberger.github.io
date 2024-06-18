@@ -1,19 +1,12 @@
 body {
 	color: #333;
-	background-color: #ddd;
+	background-color: white;
 }
 
 body.dark-theme {
     /* Dark theme styles */
-    background-color: #333;
-    color: white;
-    /* other dark theme styles */
-}
-
-body.dark-theme {
-    /* Dark theme styles */
-    background-color: #1e1e1e; /* Darker background */
-    color: #c7c7c7; /* Lighter text color */
+    background-color: #121212; /* Darker background */
+    color: #E0E0E0; /* Lighter text color */
 }
 
 /* Selection color in dark theme */
@@ -44,17 +37,17 @@ body.dark-theme h1, body.dark-theme h2, body.dark-theme h3, body.dark-theme h4, 
 
 /* Link colors */
 body.dark-theme a, body.dark-theme a:hover {
-	color: #9eadff; /* Lighter color for links */
+	color: #1E90FF; /* Lighter color for links */
 }
 
 body.dark-theme .site-description a,
 body.dark-theme .site-description a:hover {
 	color: #ddd;
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 body.dark-theme a:hover {
-	opacity: 0.9;
+	opacity: 0.6;
 }
 
 /* Tag styles */
@@ -99,7 +92,7 @@ body.dark-theme pre code {
 }
 
 body.dark-theme .venue {
-    color: #9eadff;
+    color: #4682B4;
 }
 
 body.dark-theme .section .section-header {
@@ -141,15 +134,15 @@ h1,h2,h3,h4,h5,h6 {
 	color: #333;
 }
 
-a,a:hover {
+/* a,a:hover {
 	color: #8c0707;
-	text-decoration: none;
-}
+	text-decoration: underline;
+} */
 
 .site-description a,
 .site-description a:hover {
 	color: #333;
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 a:hover {

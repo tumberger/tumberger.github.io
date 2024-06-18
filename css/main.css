@@ -1,9 +1,10 @@
 body {
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Lato", "Open Sans", "Raleway", Arial, sans-serif;
     font-weight: 400;
     line-height: 1.6;
     font-size: 14px;
 }
+
 
 img[alt=drawing] { 
     height: 250px;
@@ -85,6 +86,7 @@ blockquote cite {
 blockquote em {
     font-weight: 600;
 }
+
 
 a,a:hover {
     color: #a00;
@@ -580,7 +582,7 @@ table th, table td {
 }
 
 input:checked + .slider {
-    background-color: #a00;
+    background-color: #1E90FF;
 }
 
 input:checked + .slider:before {
