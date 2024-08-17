@@ -1,26 +1,89 @@
-body {
-    font-family: "Lato", "Open Sans", "Raleway", Arial, sans-serif;
-    font-weight: 400;
-    line-height: 1.6;
-    font-size: 14px;
+@font-face {
+    font-family: "Berkeley Mono";
+    src: url("BerkeleyMono-Regular.woff2");
 }
 
+:root {
+    --main-font-stack: "Berkeley Mono", ui-monospace, "Menlo", "Monaco", "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+    --orange: #FFA500;
+    --darkerorange: #e69726;
+    --inverseblue: #2675e6;
+    --main-font-color: #333;
+    --dark-main-font-color: #E0E0E0;
+    --secondary-font-color: #666;
+    --dark-secondary-font-color: #ddd;
+    --background-color: #FAFAFA;
+    --dark-background-color: #121212;
+    --link-hover-color: #e69726;
+    --blockquote-border-color: #555;
+    --hr-color: #555;
+    --highlight-bg-color: #444;
+    --table-header-bg-color: #444;
+    --table-border-color: #555;
+}
+
+
+body {
+    font-family: var(--main-font-stack);
+    font-size: 14px;
+    color: var(--main-font-color);
+    line-height: 1.6;
+    background-color: var(--background-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--main-font-stack);
+    line-height: 1.2;
+    color: var(--main-font-color);
+    font-weight: 200;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.6rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+h5 {
+    font-size: 0.9rem;
+}
+
+h6 {
+    font-size: 0.8rem;
+}
 
 img[alt=drawing] { 
     height: 250px;
     width: 200px; 
     object-fit: cover;
-    border-radius:20px;
+    border-radius: 20px;
     filter: grayscale();
 }
 
 a, a:hover {
-    color: rgb(0, 170, 20);
+    color: var(--orange);
     text-decoration: none;
-    word-break: break-word;
 }
 
-html,button,input,select,textarea {
+a:not(.modern-button):visited {
+    color: var(--orange);
+}
+
+a:not(.modern-button):hover {
+    text-decoration: underline;
+}
+
+html, button, input, select, textarea {
     color: #333;
 }
 
@@ -44,13 +107,13 @@ hr {
 }
 
 img {
-    margin: 10px auto 10px auto;
+    margin: 10px auto;
     max-width: 100%;
     display: block;
 }
 
 a img {
-    border:none;
+    border: none;
 }
 
 figure {
@@ -72,10 +135,10 @@ blockquote {
     margin-left: 1rem;
     font-style: italic;
     font-size: 1.4rem;
-    font-family: Georgia,bitstream charter,serif;
-    border-left: 3px solid;
-    border-color: #a00;
+    font-family: var(--main-font-stack);
+    border-left: 3px solid var(--orange);
     padding-left: 20px;
+    color: var(--main-font-color);
 }
 
 blockquote cite {
@@ -85,47 +148,6 @@ blockquote cite {
 
 blockquote em {
     font-weight: 600;
-}
-
-
-a,a:hover {
-    color: #a00;
-    text-decoration: none
-}
-
-a:hover {
-    text-decoration: underline
-}
-
-h1,h2,h3,h4,h5,h6 {
-    font-family: "Times New Roman", Times, serif;
-    line-height: 1.2;
-    color: #333;
-    font-weight: 200;
-}
-
-h1 {
-    font-size: 2rem;
-}
-
-h2 {
-    font-size: 1.6rem;
-}
-
-h3 {
-    font-size: 1.2rem;
-}
-
-h4 {
-    font-size: 1.2rem;
-}
-
-h5 {
-    font-size: 1rem;
-}
-
-h6 {
-    font-size: .9rem;
 }
 
 .align-center {
@@ -142,10 +164,19 @@ h6 {
 
 .container {
     max-width: 800px;
+    margin-top: 50px;
+    padding: 0 20px;
+}
+
+.wrapper {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 ul {
     padding-left: 15px;
+    list-style: disc inside;
 }
 
 ul.flat {
@@ -160,7 +191,7 @@ ul.flat li {
 }
 
 .prevent-collapse {
-    min-height: .1rem
+    min-height: .1rem;
 }
 
 .page-title {
@@ -171,13 +202,9 @@ ul.flat li {
     font-size: 70%;
 }
 
-ul {
-    list-style: disc inside;
-}
-
 .site-title a {
-	color: #333;
-	text-decoration: none !important;
+    color: #333;
+    text-decoration: none !important;
 }
 
 .post ul li {
@@ -201,17 +228,7 @@ ul {
 }
 
 pre code {
-  display: inline-block;
-}
-  
-
-.wrapper {
-    max-width: 760px;
-    margin: 0 auto;
-}
-
-.container {
-    margin-top: 50px;
+    display: inline-block;
 }
 
 .header {
@@ -301,7 +318,7 @@ pre code {
 }
 
 .post-tags a {
-	margin-right: 5px;
+    margin-right: 5px;
 }
 
 .post .post-header .meta {
@@ -424,12 +441,10 @@ table th, table td {
     }
 }
 
-
 /* Start of Academic Publications Styling */
 .publications-section {
     margin: 0px 0;
     padding: 0px;
-    /* background-color: #f5f5f5; */
 }
 
 .publications-section .section-header {
@@ -453,12 +468,8 @@ table th, table td {
     }
 }
 
-
 .publication {
-    /* background-color: #fff; */
     padding: 2px;
-    /* border: 0px solid #ddd;
-    border-radius: 0px; */
 }
 
 .publication-meta {
@@ -468,8 +479,7 @@ table th, table td {
 }
 
 .venue {
-    /* font-weight: bold; */
-    color: #a00;
+    color: var(--orange);
 }
 
 .publication-title {
@@ -480,20 +490,20 @@ table th, table td {
 .authors {
     margin-bottom: 5px;
     font-style: italic;
-    color: #666;
+    color: var(--secondary-font-color);
 }
 
 .read-more {
     display: inline-block;
     padding: 5px 10px;
-    background-color: #a00;
+    background-color: var(--orange);
     color: #fff;
     border-radius: 4px;
     text-decoration: none;
 }
 
 .read-more:hover {
-    background-color: #0056b3;
+    background-color: var(--link-hover-color);
 }
 
 .publication .abbreviation {
@@ -510,7 +520,6 @@ table th, table td {
         font-size: smaller; /* smaller font size */
         border-radius: 2px; /* smaller border radius */
         margin-left: 3px; /* smaller margin */
-        /* You can adjust the above values as needed */
     }
 }
 
@@ -536,16 +545,39 @@ table th, table td {
 
 /* End of Academic Publications Styling */
 
+/* Start of Modern Button Styling */
+.modern-button, .nav-item {
+    display: inline-block;
+    padding: 0.4em 0.6em;
+    font-size: 14px;
+    font-family: var(--main-font-stack);
+    text-align: center;
+    cursor: pointer;
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 0;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    margin-right: 0.4em;
+}
+
+.modern-button:hover, .nav-item:hover {
+    background-color: #f3f3f3;
+}
+
+.modern-button:active, .nav-item:active {
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
+    transform: translateY(2px) translateX(2px);
+}
+
 /* Style for the theme toggle switch */
 /* Toggle switch styles */
 .theme-switch-wrapper {
-    /* margin-left: -300px; */
     display: flex;
     align-items: center;
     position: relative;
-    /* Adjust the position as needed */
 }
-
 
 .theme-switch {
     display: inline-block;
@@ -553,7 +585,6 @@ table th, table td {
     width: 28px; /* Adjusted width */
     margin-left: 10px; /* Space between the icons and switch */
 }
-
 
 .theme-switch input {
     display: none;
@@ -596,4 +627,3 @@ input:checked + .slider:before {
 .slider.round:before {
     border-radius: 50%;
 }
-

@@ -1,12 +1,16 @@
+@font-face {
+    font-family: "Berkeley Mono";
+    src: url("BerkeleyMono-Regular.woff2");
+}
+
 body {
-	color: #333;
-	background-color: white;
+    color: var(--main-font-color);
+    background-color: white;
 }
 
 body.dark-theme {
-    /* Dark theme styles */
-    background-color: #121212; /* Darker background */
-    color: #E0E0E0; /* Lighter text color */
+    background-color: var(--dark-background-color);
+    color: var(--dark-main-font-color);
 }
 
 /* Selection color in dark theme */
@@ -22,84 +26,85 @@ body.dark-theme ::selection {
 
 /* Horizontal rule color */
 body.dark-theme hr {
-    border-color: #555;
+    border-color: var(--hr-color);
 }
 
 /* Blockquote border color */
 body.dark-theme blockquote {
-	border-color: #555;
+    border-color: var(--blockquote-border-color);
 }
 
 /* Headings color */
 body.dark-theme h1, body.dark-theme h2, body.dark-theme h3, body.dark-theme h4, body.dark-theme h5, body.dark-theme h6 {
-	color: #ddd;
+    color: var(--dark-secondary-font-color);
 }
 
 /* Link colors */
 body.dark-theme a, body.dark-theme a:hover {
-	color: #1E90FF; /* Lighter color for links */
+    color: var(--link-hover-color);
 }
 
 body.dark-theme .site-description a,
 body.dark-theme .site-description a:hover {
-	color: #ddd;
-	text-decoration: none;
+    color: var(--dark-secondary-font-color);
+    text-decoration: none;
 }
 
-body.dark-theme a:hover {
-	opacity: 0.6;
+body.dark-theme a, a:hover {
+    opacity: 1;
+    color: var(--orange);
 }
 
 /* Tag styles */
 body.dark-theme .post-tags .tags a {
-    border: 1px solid #555;
-	color: #ddd;
+    border: 1px solid var(--blockquote-border-color);
+    color: var(--dark-secondary-font-color);
 }
 
 /* Site title color */
 body.dark-theme .site-title a {
-	color: #ddd;
+    color: var(--dark-secondary-font-color);
 }
 
 /* Header and footer border color */
 body.dark-theme .header nav,
 body.dark-theme .footer {
-	border-color: #555;
+    border-color: var(--hr-color);
 }
 
 /* Highlight background color */
 body.dark-theme .highlight {
-	background-color: #444;
+    background-color: var(--highlight-bg-color);
 }
 
 /* Table header color */
 body.dark-theme table th {
-	background-color: #444;
-	color: #ddd;
+    background-color: var(--table-header-bg-color);
+    color: var(--dark-secondary-font-color);
 }
 
 /* Table cells */
 body.dark-theme table th, body.dark-theme table td {
     padding: 10px 20px;
-    border: 1px solid #555;
+    border: 1px solid var(--table-border-color);
 }
 
 /* Preformatted text */
 body.dark-theme pre code {
-  display: inline-block;
-  background-color: #333; /* Dark background for code blocks */
-  color: #c7c7c7; /* Light text for code blocks */
+    display: inline-block;
+    background-color: #333; /* Dark background for code blocks */
+    color: #c7c7c7; /* Light text for code blocks */
 }
 
 body.dark-theme .venue {
-    color: #4682B4;
+    color: var(--orange);
 }
 
 body.dark-theme .section .section-header {
     font-size: 1rem;
     font-weight: 600;
     text-transform: uppercase;
-    color: #ddd;
+    color: var(--dark-secondary-font-color);
     margin-bottom: 20px;
     letter-spacing: 1px;
 }
@@ -108,75 +113,97 @@ body.dark-theme .recent-posts .posts .post .meta,
 .post .post-header .meta,
 .list .posts .post .meta {
     font-size: 0.725rem;
-    color: #ddd;
+    color: var(--dark-secondary-font-color);
     margin-bottom: 4px;
 }
 
+/* Selection color */
 ::-moz-selection {
     background: #666;
-    text-shadow: none
+    text-shadow: none;
 }
 
 ::selection {
     background: #666;
-    text-shadow: none
+    text-shadow: none;
 }
 
+/* Horizontal rule color */
 hr {
     border-color: #333;
 }
 
+/* Blockquote border color */
 blockquote {
-	border-color: #333;
+    border-color: #333;
 }
 
-h1,h2,h3,h4,h5,h6 {
-	color: #333;
+/* Headings color */
+h1, h2, h3, h4, h5, h6 {
+    color: #333;
 }
 
-/* a,a:hover {
-	color: #8c0707;
-	text-decoration: underline;
+/* Link colors */
+/* a:hover {
+    opacity: 1;
 } */
 
-.site-description a,
-.site-description a:hover {
-	color: #333;
-	text-decoration: none;
-}
-
-a:hover {
-	opacity: 0.8;
-}
-
+/* Tag styles */
 .post-tags .tags a {
     border: 1px solid #333;
-	color: #333;
+    color: #333;
 }
 
+/* Site title color */
 .site-title a {
-	color: #333;
-	text-decoration: none !important;
+    color: #333;
+    text-decoration: none !important;
 }
 
+/* Header and footer border color */
 .header nav,
 .footer {
-	border-color: #333;
+    border-color: #333;
 }
 
+/* Highlight background color */
 .highlight {
-	background-color: #333;
+    background-color: #333;
 }
 
+/* Table header color */
 table th {
-	background-color: #333;
+    background-color: #333;
 }
 
+/* Table cells */
 table th, table td {
     padding: 10px 20px;
     border: 1px solid #666;
 }
 
+/* Preformatted text */
 pre code {
-  display: inline-block
+    display: inline-block;
+}
+
+/* Modern Button Styling in Dark Mode */
+body.dark-theme .modern-button, 
+body.dark-theme .nav-item {
+    color: var(--dark-main-font-color); /* Light text color */
+    background-color: var(--dark-background-color); /* Dark background to match dark theme */
+    border: 1px solid var(--table-border-color); /* Slightly lighter border to provide definition */
+    box-shadow: 2px 2px 0px rgba(255, 255, 255, 0.2); /* Subtle shadow for depth */
+}
+
+body.dark-theme .modern-button:hover, 
+body.dark-theme .nav-item:hover {
+    background-color: #333; /* Slightly lighter background on hover */
+}
+
+body.dark-theme .modern-button:active, 
+body.dark-theme .nav-item:active {
+    background-color: #444; /* Even lighter background for active state */
+    box-shadow: none; /* Remove shadow for pressed effect */
+    transform: translateY(2px) translateX(2px);
 }
