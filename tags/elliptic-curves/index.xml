@@ -13,7 +13,8 @@
       <pubDate>Mon, 05 Feb 2024 10:38:40 +0100</pubDate>
       
       <guid>https://ernstberger.xyz/posts/ellipticcurves/</guid>
-      <description>In recent years, SNARKs proliferated themselves as a potential privacy and scaling solution for permissionless blockchains. However, due to the complexity of underlying cryptography and mathematical constructions, SNARKs are hard to grasp for application oriented computer scientists and hardware developers.</description>
+      <description>Disclaimer: In case of inaccuracies, please open an issue on Github.
+In recent years, SNARKs proliferated themselves as a potential privacy and scaling solution for permissionless blockchains.</description>
     </item>
     
   </channel>
