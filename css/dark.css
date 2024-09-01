@@ -207,3 +207,21 @@ body.dark-theme .nav-item:active {
     box-shadow: none; /* Remove shadow for pressed effect */
     transform: translateY(2px) translateX(2px);
 }
+
+body.dark-theme .slider {
+    background-color: #555;
+}
+
+body.dark-theme input:checked + .slider {
+    background-color: var(--darkerorange);
+}
+
+body.dark-theme .slider:before {
+    background-color: #121212;
+}
+
+body.dark-theme .publication .badge {
+    border: 1px solid var(--darkerorange); /* Dark-orange border */
+    background-color: var(--darkerorange); /* Dark-orange background */
+    color: #000; /* Black text */
+}

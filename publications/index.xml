@@ -6,14 +6,23 @@
     <description>Recent content in Publications on Jens Ernstberger</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 11 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://ernstberger.xyz/publications/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://ernstberger.xyz/publications/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Zero-Knowledge Location Privacy via Accurate Floating Point SNARKs</title>
       <link>https://ernstberger.xyz/publications/zklp/</link>
-      <pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 11 May 2024 00:00:00 +0000</pubDate>
       
       <guid>https://ernstberger.xyz/publications/zklp/</guid>
-      <description>Brief summary or abstract of the publication&amp;hellip;</description>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ORIGO: Proving Provenance of Sensitive Data with Constant Communication</title>
+      <link>https://ernstberger.xyz/publications/origo/</link>
+      <pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://ernstberger.xyz/publications/origo/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -22,7 +31,7 @@
       <pubDate>Mon, 11 Mar 2024 00:00:00 +0000</pubDate>
       
       <guid>https://ernstberger.xyz/publications/zksok/</guid>
-      <description>Brief summary or abstract of the publication&amp;hellip;</description>
+      <description></description>
     </item>
     
     <item>
@@ -31,7 +40,7 @@
       <pubDate>Sun, 11 Feb 2024 00:00:00 +0000</pubDate>
       
       <guid>https://ernstberger.xyz/publications/censorship/</guid>
-      <description>Brief summary or abstract of the publication&amp;hellip;</description>
+      <description></description>
     </item>
     
     <item>
@@ -40,16 +49,16 @@
       <pubDate>Sun, 11 Feb 2024 00:00:00 +0000</pubDate>
       
       <guid>https://ernstberger.xyz/publications/zkp/</guid>
-      <description>Brief summary or abstract of the publication&amp;hellip;</description>
+      <description></description>
     </item>
     
     <item>
-      <title>ORIGO: Proving Provenance of Sensitive Data with Constant Communication</title>
-      <link>https://ernstberger.xyz/publications/origo/</link>
+      <title>zk-Bench: A Toolset for Comparative Evaluation and Performance Benchmarking of SNARKs</title>
+      <link>https://ernstberger.xyz/publications/zkbench/</link>
       <pubDate>Sun, 11 Feb 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://ernstberger.xyz/publications/origo/</guid>
-      <description>Brief summary or abstract of the publication&amp;hellip;</description>
+      <guid>https://ernstberger.xyz/publications/zkbench/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -58,7 +67,7 @@
       <pubDate>Sat, 11 Feb 2023 00:00:00 +0000</pubDate>
       
       <guid>https://ernstberger.xyz/publications/janus/</guid>
-      <description>Brief summary or abstract of the publication&amp;hellip;</description>
+      <description></description>
     </item>
     
     <item>
@@ -67,7 +76,7 @@
       <pubDate>Sat, 11 Feb 2023 00:00:00 +0000</pubDate>
       
       <guid>https://ernstberger.xyz/publications/liquidation/</guid>
-      <description>Brief summary or abstract of the publication&amp;hellip;</description>
+      <description></description>
     </item>
     
     <item>
@@ -76,7 +85,7 @@
       <pubDate>Sat, 11 Feb 2023 00:00:00 +0000</pubDate>
       
       <guid>https://ernstberger.xyz/publications/datasovereignty/</guid>
-      <description>Brief summary or abstract of the publication&amp;hellip;</description>
+      <description></description>
     </item>
     
     <item>
@@ -85,16 +94,7 @@
       <pubDate>Sat, 11 Feb 2023 00:00:00 +0000</pubDate>
       
       <guid>https://ernstberger.xyz/publications/defisok/</guid>
-      <description>Brief summary or abstract of the publication&amp;hellip;</description>
-    </item>
-    
-    <item>
-      <title>zk-Bench: A Toolset for Comparative Evaluation and Performance Benchmarking of SNARKs</title>
-      <link>https://ernstberger.xyz/publications/zkbench/</link>
-      <pubDate>Sat, 11 Feb 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://ernstberger.xyz/publications/zkbench/</guid>
-      <description>Brief summary or abstract of the publication&amp;hellip;</description>
+      <description></description>
     </item>
     
     <item>
@@ -103,7 +103,7 @@
       <pubDate>Thu, 11 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>https://ernstberger.xyz/publications/apoa/</guid>
-      <description>Brief summary or abstract of the publication&amp;hellip;</description>
+      <description></description>
     </item>
     
   </channel>

@@ -443,106 +443,92 @@ table th, table td {
 
 /* Start of Academic Publications Styling */
 .publications-section {
-    margin: 0px 0;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
-.publications-section .section-header {
-    font-size: 1.75rem;
-    font-weight: 300;
-    text-transform: uppercase;
-    color: #999;
-    margin-bottom: 50px;
-    letter-spacing: 1px;
+.publications-section .year-header {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 
 .publications-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-    gap: 20px;
-}
-
-@media screen and (max-width: 767px) { /* Adjust the max-width as needed for your mobile breakpoint */
-    .publications-list {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    }
+    display: flex;
+    flex-direction: column;
 }
 
 .publication {
-    padding: 2px;
-}
-
-.publication-meta {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 2px;
+    margin-bottom: 1.5rem;
 }
 
-.venue {
-    color: var(--orange);
+.publication .pub-left {
+    flex: 0 0 100px;
+    margin-right: 1rem;
 }
 
-.publication-title {
-    font-size: 18px;
+.publication .pub-right {
+    flex: 1;
+}
+
+.publication .badge {
+    display: inline-block;
+    padding: 0.25em 0.4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+    border: -1px solid var(--orange);
+    background-color: var(--orange); /* Orange background */
+    color: #000; /* Black text */
+}
+
+.publication .title {
     font-weight: bold;
+    margin-bottom: 0.5rem;
 }
 
-.authors {
-    margin-bottom: 5px;
+.publication .author {
     font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.publication .venue {
     color: var(--secondary-font-color);
 }
 
-.read-more {
-    display: inline-block;
-    padding: 5px 10px;
-    background-color: var(--orange);
-    color: #fff;
-    border-radius: 4px;
-    text-decoration: none;
+.publication .links {
+    margin-top: 0.5rem;
 }
 
-.read-more:hover {
-    background-color: var(--link-hover-color);
+.publication .links a {
+    margin-right: 0.5rem;
 }
 
-.publication .abbreviation {
-    padding: 2px 6px;
-    border-radius: 4px;
-    margin-left: 5px;
-    font-weight: bold;
+.publication .notes {
+    margin-top: 0.5rem;
+    font-size: 0.9em;
+    color: var(--main-font-color);
 }
 
-/* Media query for mobile devices */
-@media screen and (max-width: 767px) {
-    .publication .abbreviation {
-        padding: 1px 4px; /* smaller padding */
-        font-size: smaller; /* smaller font size */
-        border-radius: 2px; /* smaller border radius */
-        margin-left: 3px; /* smaller margin */
+body.dark-theme .notes {
+    color: var(--dark-main-font-color);
+}
+
+@media (max-width: 767px) {
+    .publication {
+        flex-direction: column;
+    }
+
+    .publication .pub-left {
+        margin-bottom: 0.5rem;
     }
 }
-
-.publication .tier1 {
-    background-color: rgb(144, 12, 12);
-    color: white;
-}
-
-.publication .tier2 {
-    background-color: #988901;
-    color: white;
-}
-
-.publication .tier3 {
-    background-color: green;
-    color: white;
-}
-
-.publication .tierNone {
-    background-color: transparent;
-    color: black;
-}
-
 /* End of Academic Publications Styling */
 
 /* Start of Modern Button Styling */
@@ -613,7 +599,7 @@ table th, table td {
 }
 
 input:checked + .slider {
-    background-color: #1E90FF;
+    background-color: var(--orange);
 }
 
 input:checked + .slider:before {
