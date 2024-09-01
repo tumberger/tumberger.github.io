@@ -39,6 +39,18 @@ if (!doNotTrack) {
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
 <body>
+    <style>
+        .publication {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 10px;
+        }
+        @media (max-width: 600px) {
+            .publication {
+                grid-template-columns: 1fr 2fr;
+            }
+        }
+    </style>
     <div class="container wrapper">
         <div class="header">
 	<base href="https://ernstberger.xyz/">
