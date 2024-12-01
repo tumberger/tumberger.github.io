@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nitro on Jens Ernstberger</title>
+    <link>https://ernstberger.xyz/tags/nitro/</link>
+    <description>Recent content in Nitro on Jens Ernstberger</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 05 Feb 2024 10:38:40 +0100</lastBuildDate><atom:link href="https://ernstberger.xyz/tags/nitro/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to verify Cryptographic Attestation of an AWS Nitro Enclave</title>
+      <link>https://ernstberger.xyz/posts/02_awsnitro/</link>
+      <pubDate>Mon, 05 Feb 2024 10:38:40 +0100</pubDate>
+      
+      <guid>https://ernstberger.xyz/posts/02_awsnitro/</guid>
+      <description>Disclaimer: In case of inaccuracies, please open an issue on Github.
+1. The Necessity of AWS Nitro Cryptographic Attestation In the realm of cloud computing, the assurance of data security and application integrity is of utmost importance.</description>
+    </item>
+    
+  </channel>
+</rss>

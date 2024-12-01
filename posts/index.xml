@@ -8,11 +8,21 @@
     <language>en-us</language>
     <lastBuildDate>Mon, 05 Feb 2024 10:38:40 +0100</lastBuildDate><atom:link href="https://ernstberger.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Revisiting Elliptic Curves, Recursive SNARKs and Folding Schemes</title>
-      <link>https://ernstberger.xyz/posts/ellipticcurves/</link>
+      <title>How to verify Cryptographic Attestation of an AWS Nitro Enclave</title>
+      <link>https://ernstberger.xyz/posts/02_awsnitro/</link>
       <pubDate>Mon, 05 Feb 2024 10:38:40 +0100</pubDate>
       
-      <guid>https://ernstberger.xyz/posts/ellipticcurves/</guid>
+      <guid>https://ernstberger.xyz/posts/02_awsnitro/</guid>
+      <description>Disclaimer: In case of inaccuracies, please open an issue on Github.
+1. The Necessity of AWS Nitro Cryptographic Attestation In the realm of cloud computing, the assurance of data security and application integrity is of utmost importance.</description>
+    </item>
+    
+    <item>
+      <title>Revisiting Elliptic Curves, Recursive SNARKs and Folding Schemes</title>
+      <link>https://ernstberger.xyz/posts/01_ellipticcurves/</link>
+      <pubDate>Mon, 05 Feb 2024 10:38:40 +0100</pubDate>
+      
+      <guid>https://ernstberger.xyz/posts/01_ellipticcurves/</guid>
       <description>Disclaimer: In case of inaccuracies, please open an issue on Github.
 In recent years, SNARKs proliferated themselves as a potential privacy and scaling solution for permissionless blockchains.</description>
     </item>

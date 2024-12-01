@@ -8,11 +8,29 @@
     <language>en-us</language>
     <lastBuildDate>Mon, 05 Feb 2024 10:38:40 +0100</lastBuildDate><atom:link href="https://ernstberger.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Applications</title>
+      <link>https://ernstberger.xyz/tags/applications/</link>
+      <pubDate>Mon, 05 Feb 2024 10:38:40 +0100</pubDate>
+      
+      <guid>https://ernstberger.xyz/tags/applications/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Elliptic Curves</title>
       <link>https://ernstberger.xyz/tags/elliptic-curves/</link>
       <pubDate>Mon, 05 Feb 2024 10:38:40 +0100</pubDate>
       
       <guid>https://ernstberger.xyz/tags/elliptic-curves/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nitro</title>
+      <link>https://ernstberger.xyz/tags/nitro/</link>
+      <pubDate>Mon, 05 Feb 2024 10:38:40 +0100</pubDate>
+      
+      <guid>https://ernstberger.xyz/tags/nitro/</guid>
       <description></description>
     </item>
     
@@ -31,6 +49,15 @@
       <pubDate>Mon, 05 Feb 2024 10:38:40 +0100</pubDate>
       
       <guid>https://ernstberger.xyz/tags/recursive-snarks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TEE</title>
+      <link>https://ernstberger.xyz/tags/tee/</link>
+      <pubDate>Mon, 05 Feb 2024 10:38:40 +0100</pubDate>
+      
+      <guid>https://ernstberger.xyz/tags/tee/</guid>
       <description></description>
     </item>
     
