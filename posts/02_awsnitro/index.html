@@ -20,8 +20,8 @@ if (!doNotTrack) {
 1. The Necessity of AWS Nitro Cryptographic Attestation In the realm of cloud computing, the assurance of data security and application integrity is of utmost importance." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ernstberger.xyz/posts/02_awsnitro/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-02-05T10:38:40+01:00" />
-<meta property="article:modified_time" content="2024-02-05T10:38:40+01:00" />
+<meta property="article:published_time" content="2024-10-07T10:38:40+01:00" />
+<meta property="article:modified_time" content="2024-10-07T10:38:40+01:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="How to verify Cryptographic Attestation of an AWS Nitro Enclave"/>
 <meta name="twitter:description" content="Disclaimer: In case of inaccuracies, please open an issue on Github.
@@ -46,66 +46,52 @@ if (!doNotTrack) {
 		<div class="header">
 	<base href="https://ernstberger.xyz/">
 	<h1 class="site-title"><a href="https://ernstberger.xyz/">Jens Ernstberger</a></h1>
-	<div class="site-description"><h2></h2><nav class="nav social">
-			<ul class="flat"><li><a href="https://github.com/tumberger" title="Github"><i data-feather="github"></i></a></li><li><a href="https://mobile.twitter.com/0xSerious" title="Twitter"><i data-feather="twitter"></i></a></li><li><a href="https://www.linkedin.com/in/jens-ernstberger-96b0ba14a/?originalSubdomain=de" title="LinkedIn"><i data-feather="linkedin"></i></a></li><li><a href="https://scholar.google.com/citations?user=9B8qrkgAAAAJ&amp;hl=en" title="Scholar"><i data-feather="book-open"></i></a></li>
-				<li class="theme-switch-wrapper">
+	<nav class="nav">
+		<div class="nav-container">
+			<ul class="flat">
+				<li>
+					<a href="/" class="nav-item">Home</a>
+				</li>
+				<li>
+					<a href="/posts" class="nav-item">Blog</a>
+				</li>
+			</ul>
+			<ul class="flat social"><li><a href="https://github.com/tumberger" title="Github"><i data-feather="github"></i></a></li><li><a href="https://mobile.twitter.com/0xSerious" title="Twitter"><i data-feather="twitter"></i></a></li><li><a href="https://www.linkedin.com/in/jens-ernstberger-96b0ba14a/?originalSubdomain=de" title="LinkedIn"><i data-feather="linkedin"></i></a></li><li><a href="https://scholar.google.com/citations?user=9B8qrkgAAAAJ&amp;hl=en" title="Scholar"><i data-feather="book-open"></i></a></li><li class="theme-switch-wrapper">
 					<label class="theme-switch" for="checkbox">
 						<input type="checkbox" id="checkbox" />
 						<div class="slider round"></div>
 					</label>
 				</li>
 			</ul>
-		</nav>
-		<script>
-			document.addEventListener('DOMContentLoaded', (event) => {
-				const toggleSwitch = document.querySelector('#checkbox');
-				
-				
-				if (localStorage.getItem('dark-theme') === 'true') {
-					document.body.classList.add('dark-theme');
-					toggleSwitch.checked = true;  
-				}
-		
-				
-				toggleSwitch.addEventListener('change', function(e) {
-					if (e.target.checked) {
-						document.body.classList.add('dark-theme');
-						localStorage.setItem('dark-theme', 'true');
-					} else {
-						document.body.classList.remove('dark-theme');
-						localStorage.setItem('dark-theme', 'false');
-					}
-				}, false);
-			});
-		</script>
-		
-	</div>
-	<nav class="nav">
-		<ul class="flat">
-			
-			<li>
-				<a href="/" class="nav-item">Home</a>
-			</li>
-			
-			<li>
-				<a href="/publications" class="nav-item">Publications</a>
-			</li>
-			
-			<li>
-				<a href="/posts" class="nav-item">Blog</a>
-			</li>
-			
-			<li>
-				<a href="/tags" class="nav-item">Tags</a>
-			</li>
-			
-		</ul>
+		</div>
 	</nav>
-</div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+	<script>
+		document.addEventListener('DOMContentLoaded', (event) => {
+			const toggleSwitch = document.querySelector('#checkbox');
+			
+			
+			if (localStorage.getItem('dark-theme') === 'true') {
+				document.body.classList.add('dark-theme');
+				toggleSwitch.checked = true;  
+			}
+	
+			
+			toggleSwitch.addEventListener('change', function(e) {
+				if (e.target.checked) {
+					document.body.classList.add('dark-theme');
+					localStorage.setItem('dark-theme', 'true');
+				} else {
+					document.body.classList.remove('dark-theme');
+					localStorage.setItem('dark-theme', 'false');
+				}
+			}, false);
+		});
+	</script>
+</nav><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 
 		<div class="post-header">
 			<h1 class="title">How to verify Cryptographic Attestation of an AWS Nitro Enclave</h1>
-			<div class="meta">Posted at &mdash; Feb 5, 2024</div>
+			<div class="meta">Posted at &mdash; Oct 7, 2024</div>
 		</div>
 
 		<div class="markdown">
@@ -214,11 +200,8 @@ PCR4 (Instance ID): Including the hash of the instance ID in PCR4 ties the encla
 <li>Ensure Security: Trust that the enclave is running securely and has not been compromised.</li>
 <li>Establish Trust: Rely on the enclave for sensitive operations, knowing that it meets the required security guarantees.</li>
 </ul>
-<h3 id="32-how-to-obtain-an-attestation-document">3.2 How to obtain an attestation document</h3>
-<p>TODO</p>
-<p>There are several libraries for obtaining an attestation document in different languages, such as <a href="https://github.com/hf/nsm">Golang</a> and <a href="https://docs.rs/aws-nitro-enclaves-nsm-api/0.4.0/aws_nitro_enclaves_nsm_api/api/index.html">Rust</a>.</p>
-<h3 id="33-verification-of-the-attestation-document">3.3 Verification of the attestation document</h3>
-<p>TODO</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <h2 id="4-encrypting-payloads-such-that-they-can-only-be-decrypted-inside-the-enclave">4. Encrypting Payloads such that they can only be decrypted inside the enclave</h2>
 <p>The transmission of sensitive data to isolated environments such as AWS Nitro Enclaves necessitates robust encryption and authentication mechanisms. Transport Layer Security (TLS) emerges as a cornerstone technology in this domain, offering a suite of cryptographic protocols designed to secure data in transit. Leveraging TLS effectively ensures that payloads intended for enclaves remain confidential and are accessible solely to the authenticated enclave, thereby maintaining the integrity and privacy of the data.</p>
 <p>TLS provides end-to-end encryption between two communicating parties, ensuring that any data exchanged is unreadable to potential eavesdroppers. When transmitting payloads to an enclave, TLS serves two primary functions:</p>
@@ -251,7 +234,8 @@ PCR4 (Instance ID): Including the hash of the instance ID in PCR4 ties the encla
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
-<h2 id="5-the-vsock-problem">5. The VSOCK Problem</h2>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <h1 id="resources-this-article-draws-from">Resources this article draws from</h1>
 <ul>
 <li>Good document on attestation process

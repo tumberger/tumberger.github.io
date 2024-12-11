@@ -2,8 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://ernstberger.xyz/posts/00_onboarding/</loc>
+    <lastmod>2024-12-10T10:38:40+01:00</lastmod>
+  </url><url>
+    <loc>https://ernstberger.xyz/tags/elliptic-curves/</loc>
+    <lastmod>2024-12-10T10:38:40+01:00</lastmod>
+  </url><url>
     <loc>https://ernstberger.xyz/</loc>
-    <lastmod>2024-05-11T00:00:00+00:00</lastmod>
+    <lastmod>2024-12-10T10:38:40+01:00</lastmod>
+  </url><url>
+    <loc>https://ernstberger.xyz/tags/notes/</loc>
+    <lastmod>2024-12-10T10:38:40+01:00</lastmod>
+  </url><url>
+    <loc>https://ernstberger.xyz/posts/</loc>
+    <lastmod>2024-12-10T10:38:40+01:00</lastmod>
+  </url><url>
+    <loc>https://ernstberger.xyz/tags/recursive-snarks/</loc>
+    <lastmod>2024-12-10T10:38:40+01:00</lastmod>
+  </url><url>
+    <loc>https://ernstberger.xyz/tags/</loc>
+    <lastmod>2024-12-10T10:38:40+01:00</lastmod>
+  </url><url>
+    <loc>https://ernstberger.xyz/tags/applications/</loc>
+    <lastmod>2024-10-07T10:38:40+01:00</lastmod>
+  </url><url>
+    <loc>https://ernstberger.xyz/posts/02_awsnitro/</loc>
+    <lastmod>2024-10-07T10:38:40+01:00</lastmod>
+  </url><url>
+    <loc>https://ernstberger.xyz/tags/nitro/</loc>
+    <lastmod>2024-10-07T10:38:40+01:00</lastmod>
+  </url><url>
+    <loc>https://ernstberger.xyz/tags/tee/</loc>
+    <lastmod>2024-10-07T10:38:40+01:00</lastmod>
   </url><url>
     <loc>https://ernstberger.xyz/publications/</loc>
     <lastmod>2024-05-11T00:00:00+00:00</lastmod>
@@ -26,34 +56,7 @@
     <loc>https://ernstberger.xyz/publications/zkbench/</loc>
     <lastmod>2024-02-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ernstberger.xyz/tags/applications/</loc>
-    <lastmod>2024-02-05T10:38:40+01:00</lastmod>
-  </url><url>
-    <loc>https://ernstberger.xyz/tags/elliptic-curves/</loc>
-    <lastmod>2024-02-05T10:38:40+01:00</lastmod>
-  </url><url>
-    <loc>https://ernstberger.xyz/posts/02_awsnitro/</loc>
-    <lastmod>2024-02-05T10:38:40+01:00</lastmod>
-  </url><url>
-    <loc>https://ernstberger.xyz/tags/nitro/</loc>
-    <lastmod>2024-02-05T10:38:40+01:00</lastmod>
-  </url><url>
-    <loc>https://ernstberger.xyz/tags/notes/</loc>
-    <lastmod>2024-02-05T10:38:40+01:00</lastmod>
-  </url><url>
-    <loc>https://ernstberger.xyz/posts/</loc>
-    <lastmod>2024-02-05T10:38:40+01:00</lastmod>
-  </url><url>
-    <loc>https://ernstberger.xyz/tags/recursive-snarks/</loc>
-    <lastmod>2024-02-05T10:38:40+01:00</lastmod>
-  </url><url>
     <loc>https://ernstberger.xyz/posts/01_ellipticcurves/</loc>
-    <lastmod>2024-02-05T10:38:40+01:00</lastmod>
-  </url><url>
-    <loc>https://ernstberger.xyz/tags/</loc>
-    <lastmod>2024-02-05T10:38:40+01:00</lastmod>
-  </url><url>
-    <loc>https://ernstberger.xyz/tags/tee/</loc>
     <lastmod>2024-02-05T10:38:40+01:00</lastmod>
   </url><url>
     <loc>https://ernstberger.xyz/publications/janus/</loc>

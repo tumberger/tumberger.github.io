@@ -46,62 +46,48 @@ In recent years, SNARKs proliferated themselves as a potential privacy and scali
 		<div class="header">
 	<base href="https://ernstberger.xyz/">
 	<h1 class="site-title"><a href="https://ernstberger.xyz/">Jens Ernstberger</a></h1>
-	<div class="site-description"><h2></h2><nav class="nav social">
-			<ul class="flat"><li><a href="https://github.com/tumberger" title="Github"><i data-feather="github"></i></a></li><li><a href="https://mobile.twitter.com/0xSerious" title="Twitter"><i data-feather="twitter"></i></a></li><li><a href="https://www.linkedin.com/in/jens-ernstberger-96b0ba14a/?originalSubdomain=de" title="LinkedIn"><i data-feather="linkedin"></i></a></li><li><a href="https://scholar.google.com/citations?user=9B8qrkgAAAAJ&amp;hl=en" title="Scholar"><i data-feather="book-open"></i></a></li>
-				<li class="theme-switch-wrapper">
+	<nav class="nav">
+		<div class="nav-container">
+			<ul class="flat">
+				<li>
+					<a href="/" class="nav-item">Home</a>
+				</li>
+				<li>
+					<a href="/posts" class="nav-item">Blog</a>
+				</li>
+			</ul>
+			<ul class="flat social"><li><a href="https://github.com/tumberger" title="Github"><i data-feather="github"></i></a></li><li><a href="https://mobile.twitter.com/0xSerious" title="Twitter"><i data-feather="twitter"></i></a></li><li><a href="https://www.linkedin.com/in/jens-ernstberger-96b0ba14a/?originalSubdomain=de" title="LinkedIn"><i data-feather="linkedin"></i></a></li><li><a href="https://scholar.google.com/citations?user=9B8qrkgAAAAJ&amp;hl=en" title="Scholar"><i data-feather="book-open"></i></a></li><li class="theme-switch-wrapper">
 					<label class="theme-switch" for="checkbox">
 						<input type="checkbox" id="checkbox" />
 						<div class="slider round"></div>
 					</label>
 				</li>
 			</ul>
-		</nav>
-		<script>
-			document.addEventListener('DOMContentLoaded', (event) => {
-				const toggleSwitch = document.querySelector('#checkbox');
-				
-				
-				if (localStorage.getItem('dark-theme') === 'true') {
-					document.body.classList.add('dark-theme');
-					toggleSwitch.checked = true;  
-				}
-		
-				
-				toggleSwitch.addEventListener('change', function(e) {
-					if (e.target.checked) {
-						document.body.classList.add('dark-theme');
-						localStorage.setItem('dark-theme', 'true');
-					} else {
-						document.body.classList.remove('dark-theme');
-						localStorage.setItem('dark-theme', 'false');
-					}
-				}, false);
-			});
-		</script>
-		
-	</div>
-	<nav class="nav">
-		<ul class="flat">
-			
-			<li>
-				<a href="/" class="nav-item">Home</a>
-			</li>
-			
-			<li>
-				<a href="/publications" class="nav-item">Publications</a>
-			</li>
-			
-			<li>
-				<a href="/posts" class="nav-item">Blog</a>
-			</li>
-			
-			<li>
-				<a href="/tags" class="nav-item">Tags</a>
-			</li>
-			
-		</ul>
+		</div>
 	</nav>
-</div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+	<script>
+		document.addEventListener('DOMContentLoaded', (event) => {
+			const toggleSwitch = document.querySelector('#checkbox');
+			
+			
+			if (localStorage.getItem('dark-theme') === 'true') {
+				document.body.classList.add('dark-theme');
+				toggleSwitch.checked = true;  
+			}
+	
+			
+			toggleSwitch.addEventListener('change', function(e) {
+				if (e.target.checked) {
+					document.body.classList.add('dark-theme');
+					localStorage.setItem('dark-theme', 'true');
+				} else {
+					document.body.classList.remove('dark-theme');
+					localStorage.setItem('dark-theme', 'false');
+				}
+			}, false);
+		});
+	</script>
+</nav><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 
 		<div class="post-header">
 			<h1 class="title">Revisiting Elliptic Curves, Recursive SNARKs and Folding Schemes</h1>
@@ -161,8 +147,7 @@ Further, pairing-based SNARKs involve a verification algorithm that relies on op
 At a high-level, an accumulation scheme requires the SNARK to be accompanied by an “accumulator“  that is updated at each recursion step and enables “postponing” the verification of SNARK proofs to the last step in the recursive chain of arguments (Benedikt Bunz covers the BCLMS20 construction for split-accumulation in detail in <a href="https://www.youtube.com/watch?v=CY84j0_E7KA">this presentation</a>).
 In the following, we will skip a bunch of related works that construct IVC from <em>atomic</em> accumulation as they still require SNARKs with sublinear verification, and further FFT-friendly cycles of elliptic curves (<a href="https://iacr.org/archive/tcc2020/12550115/12550115.pdf">BCMS20</a>, <a href="https://eprint.iacr.org/2020/1536.pdf">Halo</a>).</p>
 <!-- raw HTML omitted -->
-<h3 id="31-nova---an-argument-system-based-on-a-folding-scheme-without-the-requirement-for-succinct-arguments">3.1 NOVA - An argument system based on a folding scheme without the requirement for Succinct Arguments</h3>
-<h4 id="311-preliminaries--overview">3.1.1 Preliminaries &amp; Overview</h4>
+<h3 id="nova---an-argument-system-based-on-a-folding-scheme-without-the-requirement-for-succinct-arguments">NOVA - An argument system based on a folding scheme without the requirement for Succinct Arguments</h3>
 <p>In the following, consider that \(F\) describes the relation that we want to prove at each step (i.e., Nova describes <em>uniform</em> IVC, where the computation at each step is the same).
 Nova relies on a variant fo R1CS for arithmetization, hence recall that an R1CS instance is defined as \(A,B,C \in \mathbb{F}^{n \times n}\) such that \(F(x)=y\) iff there exists a vector \(z \coloneqq (x,y,w)\) for a witness \(w\) such that \( (A \cdot z) \circ (B \cdot z) = C \cdot z \). Note, that \(\cdot\) denotes the matrix-vector product and \(\circ\) denotes the entrywise (&ldquo;Hadamard&rdquo;) product.
 In the case of IVC, where \(F^{(i)}\) is the i-th step, this is equivalent to proving that \(F^{(i)}(x)=y\) with \(z \coloneqq (y_{i-1},y_i,w_i)\) and \( (A_i \cdot z) \circ (B_i \cdot z) = C_i \cdot z \).</p>
@@ -170,7 +155,7 @@ In the case of IVC, where \(F^{(i)}\) is the i-th step, this is equivalent to pr
 Trivially, one can fold two instances of uniform computations at each step. However, extensions of Nova support folding of non-uniform computations, allowing for efficient parallelization as described in <a href="https://hackmd.io/@monyverse/H1XSVmHNh">this post on using IVC for zkVM</a>.
 Each iterative step thereby does not compute the verification of the previous proof, which would be expensive.
 Rather, Nova levereages the additive homomorphism of additively homomorphic vector commitments (i.e. Pedersen Vector Commitment) to defer the verification until the last step.</p>
-<h4 id="312-folding-scheme">3.1.2 Folding Scheme</h4>
+<h4 id="folding-scheme">Folding Scheme</h4>
 <p>In principle, a folding scheme is rather trivial to construct. As you will see, opposing to the common belief that binomial eqquations are useless after high school, they are quite helpful to construct a folding scheme!</p>
 <!-- raw HTML omitted -->
 <p>At a high-level, a folding scheme leverages nothing besides the fact that one can combine tow algebraic R1CS instances \(z_1 \coloneqq (x_1,1,w_1)\) and \(z_2 \coloneqq (x_2,1,w_2)\) by computing their random linear combination (with a small quirk to account for errors).
@@ -200,10 +185,13 @@ We would like to show that</p>
 <p>Now, it can be shown that \( (A \cdot z) \circ (B \cdot z) = u \cdot (C \cdot z) + E \) holds for every choice of \(r \in \mathbb{F}\) by simple algebraic deduction (feel free to have a look at the <a href="https://people.cs.georgetown.edu/jthaler/ProofsArgsAndZK.pdf">book</a> of Justin Thaler where this algebraic relation is proven on page 290).
 Note, that it is important for the prover to commit to the cross-term \(T\) before receiving the randomness \(r\) by the verifier.
 Furher, committing to \(E\) and \(w\) is essential to preserve zero-knowledge. The resulting constraint system is termed <em>committed relaxed R1CS</em>.</p>
-<h4 id="313-building-ivc-from-a-folding-scheme-with-narks">3.1.3 Building IVC from a folding scheme with NARKs</h4>
-<p>Great, now we already know how to take two (committed relaxed) R1CS instances at one step of a computation and fold them into a single instance.
-It remains to construct a concrete scheme that provides IVC, by combining the folding scheme with an argument of knowledge.</p>
-<p>ToDo - Explain how to construct IVC</p>
+<p>Now we already know how to take two (committed relaxed) R1CS instances at one step of a computation and fold them into a single instance.
+It remains to construct a concrete scheme that provides IVC, by combining the folding scheme with an argument of knowledge.
+For conciseness of this blogpost, we defer the construction of the argument of knowledge and refer to <a href="https://eprint.iacr.org/2021/370.pdf">Nova</a> for more details.</p>
+<h2 id="4-why-care-about-ivc-and-recursive-snarks"><strong>4. Why care about IVC and Recursive SNARKs?</strong></h2>
+<p>Incrementally Verifiable Computation (IVC) holds particular practical significance by enabling the efficient and scalable verification of extensive and multifaceted computational tasks through a step-by-step approach. Unlike traditional methods that require revalidating entire computations, IVC allows each incremental step to be independently verified, substantially reducing the computational burden on verifiers. This capability is especially crucial in applications like the <a href="https://eprint.iacr.org/2024/1436.pdf">Eva protocol for video authenticity</a>, where processing involves numerous operations on individual macroblocks. By integrating verification seamlessly into each stage of the computation, IVC ensures both the integrity and correctness of the process without incurring prohibitive costs. This makes IVC an indispensable tool for deploying robust cryptographic protocols in real-world systems where performance and scalability are paramount.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->

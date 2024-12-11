@@ -232,8 +232,24 @@ pre code {
 }
 
 .header {
+    margin: 50px 0 20px 0;
+}
+
+.header .site-description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 20px;
-    padding-bottom: 20px;
+}
+
+.header .site-description nav {
+    margin: 0;
+    border: none;
+}
+
+.site-title {
+    margin: 0;
+    font-size: 1.2rem;
 }
 
 .header h1,
@@ -251,6 +267,29 @@ pre code {
 .header nav {
     margin-top: 20px;
     border-top: 1px solid #f4f4f4;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.nav ul.flat {
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul.flat li {
+    display: inline-block;
+    list-style: none;
+    margin-right: 10px;
+}
+
+/* Preserve dark mode border color */
+body.dark-theme .header nav {
+    border-top: 1px solid var(--hr-color);
 }
 
 .header nav ul,
@@ -295,6 +334,10 @@ pre code {
     color: #333;
     margin-bottom: 20px;
     letter-spacing: 1px;
+}
+
+.recent-posts {
+    margin-top: 40px;
 }
 
 .recent-posts .posts .post {
@@ -567,9 +610,10 @@ body.dark-theme .notes {
 
 .theme-switch {
     display: inline-block;
-    height: 14px; /* Adjusted height */
-    width: 28px; /* Adjusted width */
-    margin-left: 10px; /* Space between the icons and switch */
+    height: 14px;
+    width: 28px;
+    margin-left: 10px;
+    position: relative;
 }
 
 .theme-switch input {
@@ -589,13 +633,13 @@ body.dark-theme .notes {
 
 .slider:before {
     background-color: white;
-    bottom: 4px;
+    bottom: 1px;
     content: "";
-    height: 16px;
+    height: 12px;
+    width: 12px;
     left: 2px;
     position: absolute;
     transition: .4s;
-    width: 16px;
 }
 
 input:checked + .slider {
@@ -603,7 +647,7 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-    transform: translateX(18px);
+    transform: translateX(12px);
 }
 
 .slider.round {
@@ -612,4 +656,53 @@ input:checked + .slider:before {
 
 .slider.round:before {
     border-radius: 50%;
+}
+
+/* Adjust social icons size */
+.nav ul.flat.social svg {
+    width: 16px;
+    height: 16px;
+}
+
+.nav ul.flat.social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav ul.flat.social li {
+    margin: 0;
+    line-height: 1;
+}
+
+/* Keep theme switch size consistent */
+.theme-switch {
+    display: inline-block;
+    height: 14px;
+    width: 28px;
+    margin-left: 10px;
+}
+
+.section {
+    margin-top: 40px;
+}
+
+.highlighted-publications {
+    margin-top: 40px;
+}
+
+.highlighted-publications .publication {
+    margin-bottom: 10px;
+}
+
+.section-header {
+    margin-bottom: 20px;
+}
+
+.publication span {
+    margin-right: 4px;
+}
+
+.publication a {
+    margin-left: 4px;
 }

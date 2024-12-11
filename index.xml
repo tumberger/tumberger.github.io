@@ -6,7 +6,26 @@
     <description>Recent content on Jens Ernstberger</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://ernstberger.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Dec 2024 10:38:40 +0100</lastBuildDate><atom:link href="https://ernstberger.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Breaking Barriers: Simplifying Decentralized Onboarding</title>
+      <link>https://ernstberger.xyz/posts/00_onboarding/</link>
+      <pubDate>Tue, 10 Dec 2024 10:38:40 +0100</pubDate>
+      
+      <guid>https://ernstberger.xyz/posts/00_onboarding/</guid>
+      <description>Permissionless Blockchains offer a compelling solution for novel applications that operate in a permissionless environment. However, they currently face a daunting dichotomy - although they&amp;rsquo;re permissionless, they&amp;rsquo;re notoriously hard to access.</description>
+    </item>
+    
+    <item>
+      <title>How to verify Cryptographic Attestation of an AWS Nitro Enclave</title>
+      <link>https://ernstberger.xyz/posts/02_awsnitro/</link>
+      <pubDate>Mon, 07 Oct 2024 10:38:40 +0100</pubDate>
+      
+      <guid>https://ernstberger.xyz/posts/02_awsnitro/</guid>
+      <description>Disclaimer: In case of inaccuracies, please open an issue on Github.
+1. The Necessity of AWS Nitro Cryptographic Attestation In the realm of cloud computing, the assurance of data security and application integrity is of utmost importance.</description>
+    </item>
+    
     <item>
       <title>Zero-Knowledge Location Privacy via Accurate Floating Point SNARKs</title>
       <link>https://ernstberger.xyz/publications/zklp/</link>
@@ -26,7 +45,7 @@
     </item>
     
     <item>
-      <title>SoK: What don&#39;t we know? Understanding Security Vulnerabilities in SNARKs</title>
+      <title>SoK: Understanding Security Vulnerabilities in SNARKs</title>
       <link>https://ernstberger.xyz/publications/zksok/</link>
       <pubDate>Mon, 11 Mar 2024 00:00:00 +0000</pubDate>
       
@@ -59,16 +78,6 @@
       
       <guid>https://ernstberger.xyz/publications/zkbench/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>How to verify Cryptographic Attestation of an AWS Nitro Enclave</title>
-      <link>https://ernstberger.xyz/posts/02_awsnitro/</link>
-      <pubDate>Mon, 05 Feb 2024 10:38:40 +0100</pubDate>
-      
-      <guid>https://ernstberger.xyz/posts/02_awsnitro/</guid>
-      <description>Disclaimer: In case of inaccuracies, please open an issue on Github.
-1. The Necessity of AWS Nitro Cryptographic Attestation In the realm of cloud computing, the assurance of data security and application integrity is of utmost importance.</description>
     </item>
     
     <item>

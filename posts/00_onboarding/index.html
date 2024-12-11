@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-R2NJMVSSYH', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><title>Breaking Barriers: Simplifying Decentralized Onboarding - Jens Ernstberger</title><link rel="icon" type="image/png" href="icons/myicon.png" /><meta property="og:title" content="Breaking Barriers: Simplifying Decentralized Onboarding" />
+<meta property="og:description" content="Permissionless Blockchains offer a compelling solution for novel applications that operate in a permissionless environment. However, they currently face a daunting dichotomy - although they&rsquo;re permissionless, they&rsquo;re notoriously hard to access." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ernstberger.xyz/posts/00_onboarding/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-12-10T10:38:40+01:00" />
+<meta property="article:modified_time" content="2024-12-10T10:38:40+01:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Breaking Barriers: Simplifying Decentralized Onboarding"/>
+<meta name="twitter:description" content="Permissionless Blockchains offer a compelling solution for novel applications that operate in a permissionless environment. However, they currently face a daunting dichotomy - although they&rsquo;re permissionless, they&rsquo;re notoriously hard to access."/>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ernstberger.xyz/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ernstberger.xyz/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="https://ernstberger.xyz/css/custom.css" />
+	<link rel="stylesheet" type="text/css" href="https://ernstberger.xyz/css/dark.css"  />
+	<link rel="stylesheet" type="text/css" href="https://ernstberger.xyz/css/custom-dark.css"  />
+
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+	
+	<script src="https://ernstberger.xyz/js/main.js"></script>
+	<script src="https://ernstberger.xyz/js/abc.js"></script>
+	<script src="https://ernstberger.xyz/js/xyz.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+	<div class="container wrapper post">
+		<div class="header">
+	<base href="https://ernstberger.xyz/">
+	<h1 class="site-title"><a href="https://ernstberger.xyz/">Jens Ernstberger</a></h1>
+	<nav class="nav">
+		<div class="nav-container">
+			<ul class="flat">
+				<li>
+					<a href="/" class="nav-item">Home</a>
+				</li>
+				<li>
+					<a href="/posts" class="nav-item">Blog</a>
+				</li>
+			</ul>
+			<ul class="flat social"><li><a href="https://github.com/tumberger" title="Github"><i data-feather="github"></i></a></li><li><a href="https://mobile.twitter.com/0xSerious" title="Twitter"><i data-feather="twitter"></i></a></li><li><a href="https://www.linkedin.com/in/jens-ernstberger-96b0ba14a/?originalSubdomain=de" title="LinkedIn"><i data-feather="linkedin"></i></a></li><li><a href="https://scholar.google.com/citations?user=9B8qrkgAAAAJ&amp;hl=en" title="Scholar"><i data-feather="book-open"></i></a></li><li class="theme-switch-wrapper">
+					<label class="theme-switch" for="checkbox">
+						<input type="checkbox" id="checkbox" />
+						<div class="slider round"></div>
+					</label>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<script>
+		document.addEventListener('DOMContentLoaded', (event) => {
+			const toggleSwitch = document.querySelector('#checkbox');
+			
+			
+			if (localStorage.getItem('dark-theme') === 'true') {
+				document.body.classList.add('dark-theme');
+				toggleSwitch.checked = true;  
+			}
+	
+			
+			toggleSwitch.addEventListener('change', function(e) {
+				if (e.target.checked) {
+					document.body.classList.add('dark-theme');
+					localStorage.setItem('dark-theme', 'true');
+				} else {
+					document.body.classList.remove('dark-theme');
+					localStorage.setItem('dark-theme', 'false');
+				}
+			}, false);
+		});
+	</script>
+</nav><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+
+		<div class="post-header">
+			<h1 class="title">Breaking Barriers: Simplifying Decentralized Onboarding</h1>
+			<div class="meta">Posted at &mdash; Dec 10, 2024</div>
+		</div>
+
+		<div class="markdown">
+			<p>Permissionless Blockchains offer a compelling solution for novel applications that operate in a permissionless environment. However, they currently face a daunting dichotomy - although they&rsquo;re permissionless, they&rsquo;re notoriously hard to access. Whereas applications that are native to blockchains are already decentralized, users are unable to interact with them without first acquiring cryptocurrency from a centralized, trusted exchange. The process is tedious and error-prone - users need to send funds to often sparsely regulated entities from their own bank account. Further, processes often take multiple days, and incur unfavourable exchange rate.</p>
+<p>The core problem motivating this dichotomy is a mismatch in trust models. Whereas regulatory guardrails usually enforce well behavior in existing financial systems, decentralized systems operate in a hostile environment across multiple jurisdictions without clearly enforcable boundaries. Any solution that offers true decentralization needs to offer strong, baked-in security from the get-go, and thereby demands for a well-designed threat model.</p>
+<h2 id="1-permissionless-p2p-onboarding">1. Permissionless P2P Onboarding</h2>
+<p>Initial solutions propose solving the Onboarding Problem through decentralized acquisition of cryptocurrencies by relying on a Peer to Peer (P2P) exchange, where the <code>SELLER</code> of a cryptocurrency embeds a specific amount <code>X</code> tokens in an escrow smart contract. The <code>BUYER</code> of a the <code>X</code> tokens sends <code>Y</code> amount of FIAT currency to the <code>SELLER</code> on a legacy platform (e.g. Venmo, bank transfer, etc.), and successively creates a proof $\pi$ that attests that the transaction on the legacy platform has successively been executed.</p>
+<p>The proof $\pi$ can be obtained in multiple ways - either through proof that an email confirms the transaction (<a href="https://prove.email/)">https://prove.email/)</a>, or through a notarization of a TLS session, which can verify the authenticity of TLS data while protecting privacy (<a href="https://tlsnotary.org/">https://tlsnotary.org/</a>, i.e. in this case querying the API of the legacy platform to validate the correct execution of transactions, numerous academic works like <a href="https://eprint.iacr.org/2024/447.pdf">ORIGO</a> that aim to trade off security assumptions with latency to make this practial).</p>
+<p><strong>Why previous solutions do not suffice to solve the Onboarding Problem</strong></p>
+<p>Any of the above solutions are only able to realize a general One-Sided Limit-Order Book, where the order book is maintained by the on-chain escrow contract. Users that want to acquire a specific order partially / fully are demanded to be online when executing the transaction - hence they are generally unable to post an <code>ASK</code>. This is due to the fundamental inability of the above proof techniques to execute a transaction on behalf of the user.</p>
+<h3 id="11---benefits-of-a-two-sided-limit-order-book">1.1 - Benefits of a two-sided limit-order book</h3>
+<p>A two-sided limit-order book offers significant advantages that address the above shortcomings in regards to liquidity. By allowing both buyers and sellers to post limit orders, it enhances liquidity and improves price discovery mechanisms. Buyers can post bids and sellers can post asks, enabling the matching of orders without the need for both parties to be online simultaneously. This asynchronous matching increases the efficiency of the market by facilitating smoother transactions and better aligning supply and demand by allowing market makers to make a deterministic profit from the spread.</p>
+<p>Additionally, a two-sided order book can mitigate challenges associated with price impact and market manipulation that are more prevalent in one-sided books. The presence of both buy and sell orders creates a more balanced and competitive trading environment, reducing the likelihood of extreme price movements caused by large orders consuming the available liquidity on one side of the book. This balance helps in maintaining fairer prices and provides a more stable market structure, which is particularly important in a P2P onboarding platform where trust and reliability are crucial.</p>
+<h3 id="12---how-can-a-p2p-two-sided-limit-order-book-be-realized">1.2 - How can a P2P two-sided limit-order book be realized?</h3>
+<!-- raw HTML omitted -->
+<p>A two-sided limit-order book is only possible if smart contracts are not only able to <strong>RECEIVE</strong> transfers from legacy payment providers, but if they are also able to <strong>SEND</strong> transfers, i.e. trigger off-chain transactions based on events that are emitted upon smart contract interaction.</p>
+<p>Now, theoretically, this is trivial - a payment provider, like a major bank, remains online consistently, listens to a set of smart contract events, processes a payment, and issues a signature that the payment has been executed correctly, which can be verified in a smart contract.  However, this practice would require trust into the centralized payment provider to execute the transaction under the correct conditions, which is fundamentally at odds with the ethos of blockchain and decentralized technologies, which prioritize trustlessness and distributed control.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>So what would be measures that can be taken to mitigate this issue?</p>
+<p><strong>Approach 1: Custodial</strong> - User sends money to a bank. Bank holds USD in a custodial fashion, with a user-determined trigger upon which to process a payment. Smart Contract Event occurs, which triggers the payment. Bank computes a ZKP of SEPA transfer. Bank interacts with Smart Contract, which verifies the proof that SEPA transfer occured.</p>
+<p><strong>Approach 2: Non-Custodial</strong> - User delegates a secret to a Trusted Execution Environment (TEE), under a pre-described policy which outlines under which condition to utilize the secret to execute a payment. Smart Contract Event occurs, which triggers the TEE to use the secret to execute a payment. Another (or the same) TEE uses another (or the same) secret to continuously trigger the endpoint provided by the payment provider, to check whenever the payment has been executed. Whenever this is the case, the TEE (or TEEs) provide a signature. Smart Contract verifies the proof that off-chain payment occured and acts accordingly.</p>
+<p>As a matter of fact, both approaches outlined are complementary. Approach 1 is significantly harder to operationalize, but would have to use the same techniques as Approach 2 to support the described product offering of trustless payment processing.</p>
+<!-- raw HTML omitted -->
+<p><img src="https://hackmd.io/_uploads/BkUvq9d7yg.png" alt="image">
+Figure 1 - Visual Depiction of Approach 2</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h3 id="13-one-time-payments-and-trusted-execution-environments">1.3 One-Time Payments and Trusted Execution Environments</h3>
+<p>One of the biggest problems the above solution faces is ensuring the integrity od <code>WRITE</code> executions based on OAuth2.0. In our first PoC we will aim for clear separation of <code>READ</code> and <code>WRITE</code> access. I.e., the scope of operation is simple - a middleware operator can only 1) execute whatever is specfied in the scope or 2) refuse service. Successively, we will explore ways to delegate secrets that do not require a restricted scope, whilst maintaining high integrity guarantees, without relying on TEEs for integrity protection, but only for privacy protection.</p>
+<p>Further, there is a lot of nuance in utilizing TEEs - let alone utilizing them in a permissionless network. Especially, if obtaining additional information about trading information can lead to information assymetry and thereby additional malicious but deterministic profits from adversarial actors. Luckily, there is many efforts driving efforts forward on all fronts - from <a href="https://ieeexplore.ieee.org/document/9152809">mitigation of memory access patterns with ORAM</a>, to the mistakes that <a href="https://sgx.fail/">Secret Network already did when deplokying in practice</a>, to first initiatives and open-source tooling that enables <a href="https://github.com/automata-network/automata-dcap-attestation">decentralized verification of remote attestations</a> and <a href="https://github.com/Phala-Network/dstack">permissionless operation of TEE networks</a>.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="2-proof-of-concept---zwift">2. Proof of Concept - Zwift</h2>
+<p>Zwift is our approach in tackling the above vision, which enables users to post bids to buy cryptocurrencies in a permissionless setting by leveraging secure computing and programmable, permissionless blockchains. Zwift&rsquo;s methodology centers around creating a secure, efficient, and user-centric platform for P2P cryptocurrency exchanges with optimal UX and a &ldquo;one-click&rdquo; onboarding process.</p>
+<h3 id="21-system-overview">2.1 System Overview</h3>
+<p><img src="https://hackmd.io/_uploads/SJ_pCViGke.png" alt="Untitled-2024-03-04-1219(3)">
+Figure 2 - Zwift PoC Architecture</p>
+<p>Zwift needs several components to work in a seamless fashion. A set of smart contracts that exposes the relevant logic for escrowing funds, and for verifying signatures (<code>contracts</code>). An <code>indexer</code>, which fetches emitted smart contract events and writes them to a database. A <code>paypal</code> backend hosted in a TEE (might be any API the is enabled by OAUTH 2.0). A frontend (<code>zwift-dapp</code>) which allows posting a <code>BID</code> or and <code>ASK</code> to the smart contract and the TEE-enabled backend respectively.</p>
+<p>In the following we outline the core component in our architecture - the backend that allows payments through a payment provider by delegating access tokens - in the following relevant steps:</p>
+<ol>
+<li>User Registration</li>
+<li>Payment Execution</li>
+<li>Delegation of Write Authority in a Two-Sided Order Book</li>
+</ol>
+<h3 id="22-registration-of-users">2.2 Registration of Users</h3>
+<p><img src="https://hackmd.io/_uploads/SJ3K2Vifkx.png" alt="image">
+Figure 3 - Registration Flow PayPal Backend</p>
+<p><strong>Registration Flow with PayPal.</strong> In Zwift, user registration leverages PayPal&rsquo;s OAuth2 authentication, mediated by a backend running in a Trusted Execution Environment (TEE). The frontend initiates the process by requesting an authorization URL from the backend. The backend, operating securely within the TEE, generates this URL and responds to the frontend. The frontend then redirects the user to PayPal for authentication. After successful login, PayPal returns an authorization code to the frontend, which forwards it to the backend.</p>
+<p>Within the TEE, the backend exchanges the authorization code for an access token via PayPal&rsquo;s API. The access token is used in a one-time operation to fetch the user&rsquo;s email address. The backend creates a session, uniquely identified within the TEE, and associates it with the user&rsquo;s email. The session identifier is returned to the frontend, enabling subsequent requests to authenticate the user without requiring repeated interaction with PayPal. By enforcing a strict one-time read and write policy within the TEE, Zwift ensures that sensitive data is handled minimally and securely, aligning with its broader design principles of trust and decentralization.</p>
+<!-- raw HTML omitted -->
+<h3 id="23-checkout---payment-execution">2.3 Checkout - Payment Execution</h3>
+<p><img src="https://hackmd.io/_uploads/HJNDb8jMyg.png" alt="Screenshot 2024-11-20 at 13.06.02">
+Figure 4 - Payment Execution PayPal Backend</p>
+<p>The checkout process in Zwift manages payment interactions, while adhering to strict separation of read and write operations, leveraging the capabilities of the backend running within a Trusted Execution Environment (TEE). The process begins when the frontend sends a request to the backend to create a new checkout session. The backend, isolated in the TEE, generates a PayPal order by interacting with the PayPal API and returns the order details, including a checkout URL and orderID, to the frontend. The user is redirected to the PayPal checkout URL to complete the payment.</p>
+<p>Once the payment is confirmed, PayPal redirects the user back to the frontend, which forwards the orderID to the backend for verification. The backend captures the payment using the orderID through a write operation, ensuring that the transaction is atomically processed. The payment details are then retrieved in a separate read operation to verify the transaction&rsquo;s status, including seller protection and final capture status. Sensitive details are immediately discarded after use, ensuring that they are not retained in memory or storage.</p>
+<p>This strict delineation between read and write operations ensures that any data used in the write path is ephemeral, reducing the attack surface. Additionally, by isolating sensitive operations within the TEE, Zwift ensures that even compromised frontend components cannot tamper with the integrity of payment execution.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="4-example---market-maker-activity-on-zwift">4. Example - Market Maker Activity on Zwift</h2>
+<p>Given a two-sided order-book, market makers are incentivized to fulfill trades as they can deterministically make a profit from the spread. The following outlines the profitability in a simple calculation, where a market maker intermediates the liquidity between the <code>SELLER</code> and <code>BUYER</code> of a stablecoin.</p>
+<p><strong>1. Initial Positions</strong></p>
+<pre><code>The market maker (MM) starts with:
+    - 1,000 USDC in inventory (to sell at $1.0025).
+    - $1,000 USD in cash (to buy at $0.9975).
+</code></pre>
+<p><strong>2. Transactions</strong>
+Two users interact with the market maker:</p>
+<pre><code>User A (Seller) Wants to Sell USDC for USD:
+    - User A sells 1,000 USDC to the MM at $0.9975/USDC.
+    - MM's Action: The MM buys 1,000 USDC from User A, paying:
+        - Amount Paid by MM=1,000×0.9975=997.50 USD
+        The MM's updated inventory:
+            USDC: 2,000 (1,000 original + 1,000 bought)
+            USD: $2.50 (remaining cash after the purchase)
+</code></pre>
+<p>Simplified Payment Flow: MM has PayPal account, executes transaction on PayPal, gets signature from TEE, calls escrow to unlock payment.</p>
+<pre><code>User B (Buyer) Wants to Buy USDC with USD:
+    User B buys 1,000 USDC from the MM at $1.0025/USDC.
+    MM's Action: The MM sells 1,000 USDC to User B, receiving:
+        Amount Received by MM=1,000×1.0025=1,002.50 USD
+    The MM's updated inventory:
+        USDC: 1,000 (2,000 original - 1,000 sold)
+        USD: $1,005 (2.50 remaining + 1,002.50 earned)
+</code></pre>
+<p>Simplified Payment Flow: Public onboarding intent exists in off-chain transaction pool to send a paypal tx for $1.0025/USDC. MM has on-chain account, posts offboarding intent for $1.0025/USDC, TEE indexer fetches event emitted by the smart contract, realizes that a matching onboarding intent exists, and autonomously executes the payment in the off-chain payment platform.</p>
+<p>For this, the MM needs to interact with the Zwift Smart Contract to publicly reveal 1) the tx that attests successful completion of an off-chain payment and 2) the intent to offboard (ideally both atomically in one block)- another entity could copy the offboard intent, place a tx with higher bid, and frontrun the transaction. It&rsquo;s important for the MM that the offboarding intent is included 1) swiftly, 2) privately, and 3) with high probability of inclusion. PROF is the only system that provides all 3.</p>
+<p><strong>3. Profit Calculation</strong></p>
+<pre><code>The MM started with 1,000 USDC and $1,000 USD.
+
+After both transactions, the MM holds:
+    - 1,000 USDC and $1,005 USD.
+</code></pre>
+<p><strong>Profit from Spread:</strong></p>
+<pre><code>Profit = (Sell Price−Buy Price)×Volume Traded
+Profit = (1.0025−0.9975)×1,000=0.005×1,000 = 5USD
+</code></pre>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+
+		</div>
+
+		<div class="post-tags">
+			
+				
+					<nav class="nav tags">
+							<ul class="flat">
+								
+								<li><a href="/tags/notes">Notes</a></li>
+								
+								<li><a href="/tags/elliptic-curves">Elliptic Curves</a></li>
+								
+								<li><a href="/tags/recursive-snarks">Recursive SNARKs</a></li>
+								
+							</ul>
+					</nav>
+				
+			
+		</div>
+	</div>
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div></a></div>
+	</nav>
+</div>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-R2NJMVSSYH', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+<script>feather.replace()</script><script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+</body>
+</html>

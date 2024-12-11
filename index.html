@@ -44,68 +44,54 @@ if (!doNotTrack) {
 		<div class="header">
 	<base href="https://ernstberger.xyz/">
 	<h1 class="site-title"><a href="https://ernstberger.xyz/">Jens Ernstberger</a></h1>
-	<div class="site-description"><h2></h2><nav class="nav social">
-			<ul class="flat"><li><a href="https://github.com/tumberger" title="Github"><i data-feather="github"></i></a></li><li><a href="https://mobile.twitter.com/0xSerious" title="Twitter"><i data-feather="twitter"></i></a></li><li><a href="https://www.linkedin.com/in/jens-ernstberger-96b0ba14a/?originalSubdomain=de" title="LinkedIn"><i data-feather="linkedin"></i></a></li><li><a href="https://scholar.google.com/citations?user=9B8qrkgAAAAJ&amp;hl=en" title="Scholar"><i data-feather="book-open"></i></a></li>
-				<li class="theme-switch-wrapper">
+	<nav class="nav">
+		<div class="nav-container">
+			<ul class="flat">
+				<li>
+					<a href="/" class="nav-item">Home</a>
+				</li>
+				<li>
+					<a href="/posts" class="nav-item">Blog</a>
+				</li>
+			</ul>
+			<ul class="flat social"><li><a href="https://github.com/tumberger" title="Github"><i data-feather="github"></i></a></li><li><a href="https://mobile.twitter.com/0xSerious" title="Twitter"><i data-feather="twitter"></i></a></li><li><a href="https://www.linkedin.com/in/jens-ernstberger-96b0ba14a/?originalSubdomain=de" title="LinkedIn"><i data-feather="linkedin"></i></a></li><li><a href="https://scholar.google.com/citations?user=9B8qrkgAAAAJ&amp;hl=en" title="Scholar"><i data-feather="book-open"></i></a></li><li class="theme-switch-wrapper">
 					<label class="theme-switch" for="checkbox">
 						<input type="checkbox" id="checkbox" />
 						<div class="slider round"></div>
 					</label>
 				</li>
 			</ul>
-		</nav>
-		<script>
-			document.addEventListener('DOMContentLoaded', (event) => {
-				const toggleSwitch = document.querySelector('#checkbox');
-				
-				
-				if (localStorage.getItem('dark-theme') === 'true') {
-					document.body.classList.add('dark-theme');
-					toggleSwitch.checked = true;  
-				}
-		
-				
-				toggleSwitch.addEventListener('change', function(e) {
-					if (e.target.checked) {
-						document.body.classList.add('dark-theme');
-						localStorage.setItem('dark-theme', 'true');
-					} else {
-						document.body.classList.remove('dark-theme');
-						localStorage.setItem('dark-theme', 'false');
-					}
-				}, false);
-			});
-		</script>
-		
-	</div>
-	<nav class="nav">
-		<ul class="flat">
-			
-			<li>
-				<a href="/" class="nav-item">Home</a>
-			</li>
-			
-			<li>
-				<a href="/publications" class="nav-item">Publications</a>
-			</li>
-			
-			<li>
-				<a href="/posts" class="nav-item">Blog</a>
-			</li>
-			
-			<li>
-				<a href="/tags" class="nav-item">Tags</a>
-			</li>
-			
-		</ul>
+		</div>
 	</nav>
-</div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+	<script>
+		document.addEventListener('DOMContentLoaded', (event) => {
+			const toggleSwitch = document.querySelector('#checkbox');
+			
+			
+			if (localStorage.getItem('dark-theme') === 'true') {
+				document.body.classList.add('dark-theme');
+				toggleSwitch.checked = true;  
+			}
+	
+			
+			toggleSwitch.addEventListener('change', function(e) {
+				if (e.target.checked) {
+					document.body.classList.add('dark-theme');
+					localStorage.setItem('dark-theme', 'true');
+				} else {
+					document.body.classList.remove('dark-theme');
+					localStorage.setItem('dark-theme', 'false');
+				}
+			}, false);
+		});
+	</script>
+</nav><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 
 		
 
 		
         <!-- raw HTML omitted -->
-<p><img src="./images/jens.jpg" alt="drawing"></p>
+<!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
@@ -121,6 +107,52 @@ Previously, I was a PhD student at <a href="https://www.tum.de/en/">Technical Un
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 
+
+		<div class="section highlighted-publications">
+			<h2 class="section-header">Selected Publications</h2>
+			<div class="publications-list">
+				
+				<div class="publication">
+					<span>IEEE S&amp;P 2025 - </span><a href="https://arxiv.org/pdf/2404.14983" target="_blank">Zero-Knowledge Location Privacy via Accurate Floating Point SNARKs</a>
+				</div>
+				
+				<div class="publication">
+					<span>PETS 2025 - </span><a href="https://eprint.iacr.org/2024/447.pdf" target="_blank">ORIGO: Proving Provenance of Sensitive Data with Constant Communication</a>
+				</div>
+				
+				<div class="publication">
+					<span>USENIX Security 2024 - </span><a href="https://arxiv.org/pdf/2402.15293" target="_blank">SoK: Understanding Security Vulnerabilities in SNARKs</a>
+				</div>
+				
+				<div class="publication">
+					<span>Euro S&amp;P 2023 - </span><a href="https://eprint.iacr.org/2023/967.pdf" target="_blank">SoK: Data Sovereignty</a>
+				</div>
+				
+				<div class="publication">
+					<span>IEEE S&amp;P 2023 - </span><a href="https://discovery.ucl.ac.uk/id/eprint/10182321/1/2022-1773%20%281%29.pdf" target="_blank">SoK: Decentralized Finance (DeFi) Attacks</a>
+				</div>
+				
+			</div>
+		</div>
+		<div class="recent-posts section">
+			<h2 class="section-header">Writing</h2>
+			<div class="posts">
+				
+				
+				<div class="post">
+					<span>Dec 10, 2024 - </span><a class="title" href="/posts/00_onboarding/">Breaking Barriers: Simplifying Decentralized Onboarding</a>
+				</div>
+				
+				<div class="post">
+					<span>Oct 7, 2024 - </span><a class="title" href="/posts/02_awsnitro/">How to verify Cryptographic Attestation of an AWS Nitro Enclave</a>
+				</div>
+				
+				<div class="post">
+					<span>Feb 5, 2024 - </span><a class="title" href="/posts/01_ellipticcurves/">Revisiting Elliptic Curves, Recursive SNARKs and Folding Schemes</a>
+				</div>
+				
+			</div>
+		</div>
 
 	</div>
 	<div class="footer wrapper">

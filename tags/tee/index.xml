@@ -6,11 +6,11 @@
     <description>Recent content in TEE on Jens Ernstberger</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 05 Feb 2024 10:38:40 +0100</lastBuildDate><atom:link href="https://ernstberger.xyz/tags/tee/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 07 Oct 2024 10:38:40 +0100</lastBuildDate><atom:link href="https://ernstberger.xyz/tags/tee/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to verify Cryptographic Attestation of an AWS Nitro Enclave</title>
       <link>https://ernstberger.xyz/posts/02_awsnitro/</link>
-      <pubDate>Mon, 05 Feb 2024 10:38:40 +0100</pubDate>
+      <pubDate>Mon, 07 Oct 2024 10:38:40 +0100</pubDate>
       
       <guid>https://ernstberger.xyz/posts/02_awsnitro/</guid>
       <description>Disclaimer: In case of inaccuracies, please open an issue on Github.
