@@ -269,6 +269,26 @@ pre code {
     border-top: 1px solid #f4f4f4;
 }
 
+/* Add spacing after navigation */
+.header nav {
+    margin-bottom: 40px;  /* Increased from 20px */
+}
+
+/* Add spacing for the main content container */
+.container.wrapper {
+    margin-top: 30px;
+}
+
+/* Specific spacing for blog posts */
+.wrapper.post {
+    margin-top: 30px;
+}
+
+/* Add spacing for the post content */
+.post .markdown {
+    margin-top: 40px;
+}
+
 .nav-container {
     display: flex;
     justify-content: space-between;
