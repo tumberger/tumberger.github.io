@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-R2NJMVSSYH"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-R2NJMVSSYH');
+        }
+      </script>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><title>Why Contextual Authorization Is the Missing Layer for Safe AI Agents. - Jens Ernstberger</title><link rel="icon" type="image/png" href="icons/test.png" /><meta property="og:url" content="https://ernstberger.xyz/posts/04_contextualauth/">
+  <meta property="og:site_name" content="Jens Ernstberger">
+  <meta property="og:title" content="Why Contextual Authorization Is the Missing Layer for Safe AI Agents.">
+  <meta property="og:description" content="AI agents no longer live in research papers—they triage email, push code, and spin up cloud resources. Their power is their context awareness, yet that same context can turn against them. A recent exploit against the GitHub MCP plug-in proved the point: a single issue in a public repo tricked an agent into leaking private code and salary data into a public pull request. Nothing in GitHub’s API was broken; the agent simply acted on private context without sufficient guardrails.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-06-03T10:38:40+01:00">
+    <meta property="article:modified_time" content="2025-06-03T10:38:40+01:00">
+    <meta property="article:tag" content="Delegation">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="Internet">
+    <meta property="article:tag" content="Authorization">
+    <meta property="article:tag" content="Browser">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Why Contextual Authorization Is the Missing Layer for Safe AI Agents.">
+  <meta name="twitter:description" content="AI agents no longer live in research papers—they triage email, push code, and spin up cloud resources. Their power is their context awareness, yet that same context can turn against them. A recent exploit against the GitHub MCP plug-in proved the point: a single issue in a public repo tricked an agent into leaking private code and salary data into a public pull request. Nothing in GitHub’s API was broken; the agent simply acted on private context without sufficient guardrails.">
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ernstberger.xyz/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ernstberger.xyz/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="https://ernstberger.xyz/css/custom.css" />
+	<link rel="stylesheet" type="text/css" href="https://ernstberger.xyz/css/dark.css"  />
+	<link rel="stylesheet" type="text/css" href="https://ernstberger.xyz/css/custom-dark.css"  />
+
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+	
+	<script src="https://ernstberger.xyz/js/main.js"></script>
+	<script src="https://ernstberger.xyz/js/abc.js"></script>
+	<script src="https://ernstberger.xyz/js/xyz.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+	<div class="container wrapper post">
+		<div class="header">
+	<base href="https://ernstberger.xyz/">
+	<h1 class="site-title"><a href="https://ernstberger.xyz/">Jens Ernstberger</a></h1>
+	<nav class="nav">
+		<div class="nav-container">
+			<ul class="flat">
+				<li>
+					<a href="/" class="nav-item">Home</a>
+				</li>
+				<li>
+					<a href="/posts" class="nav-item">Blog</a>
+				</li>
+			</ul>
+			<ul class="flat social"><li><a href="https://github.com/tumberger" title="Github"><i data-feather="github"></i></a></li><li><a href="https://mobile.twitter.com/0xSerious" title="Twitter"><i data-feather="twitter"></i></a></li><li><a href="https://www.linkedin.com/in/jens-ernstberger-96b0ba14a/?originalSubdomain=de" title="LinkedIn"><i data-feather="linkedin"></i></a></li><li><a href="https://scholar.google.com/citations?user=9B8qrkgAAAAJ&amp;hl=en" title="Scholar"><i data-feather="book-open"></i></a></li><li class="theme-switch-wrapper">
+					<label class="theme-switch" for="checkbox">
+						<input type="checkbox" id="checkbox" />
+						<div class="slider round"></div>
+					</label>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<script>
+		document.addEventListener('DOMContentLoaded', (event) => {
+			const toggleSwitch = document.querySelector('#checkbox');
+			
+			
+			if (localStorage.getItem('dark-theme') === 'true') {
+				document.body.classList.add('dark-theme');
+				toggleSwitch.checked = true;  
+			}
+	
+			
+			toggleSwitch.addEventListener('change', function(e) {
+				if (e.target.checked) {
+					document.body.classList.add('dark-theme');
+					localStorage.setItem('dark-theme', 'true');
+				} else {
+					document.body.classList.remove('dark-theme');
+					localStorage.setItem('dark-theme', 'false');
+				}
+			}, false);
+		});
+	</script>
+</nav><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+
+		<div class="post-header">
+			<h1 class="title">Why Contextual Authorization Is the Missing Layer for Safe AI Agents.</h1>
+			<div class="meta">Posted at &mdash; Jun 3, 2025</div>
+		</div>
+
+		<div class="markdown">
+			<p>AI agents no longer live in research papers—they triage email, push code, and spin up cloud resources. Their power is their context awareness, yet that same context can turn against them. A <a href="https://invariantlabs.ai/blog/mcp-github-vulnerability">recent exploit</a> against the GitHub MCP plug-in proved the point: a single issue in a public repo tricked an agent into leaking private code and salary data into a public pull request. Nothing in GitHub&rsquo;s API was broken; the agent simply acted on private context without sufficient guardrails.</p>
+<h2 id="the-limits-of-traditional-authorization">The Limits of Traditional Authorization</h2>
+<p>Traditional role-based access control stops at the identity of the caller. Agents need something finer. Whether deleting an email is benign or catastrophic depends on the sender, the business goal, and the user&rsquo;s instructions—all details that shift from task to task. Hard-coding every possibility is impossible, and asking the user to confirm every step leads straight to &ldquo;Allow Always&rdquo; fatigue.
+Static scopes and bearer tokens were built for yesterday&rsquo;s services; they cannot defend an autonomous workflow that rewrites its own plan every second.</p>
+<h2 id="how-contextual-authorization-works">How Contextual Authorization Works</h2>
+<p>Contextual authorization solves the problem. Each time an agent receives a task—&ldquo;Summarize open issues,&rdquo; &ldquo;Ship today&rsquo;s build,&rdquo; &ldquo;Purge spam&rdquo;—the platform assembles a slice of trusted context, then generates a tight, purpose-bound contract that spells out exactly which tool calls are acceptable.
+The policy lives only for the duration of the task and is enforced deterministically in real time. If the agent tries a step that drifts outside the contract, execution stops cold. No heuristics or probability thresholds, no silent failures.</p>
+<h2 id="defending-against-attack-vectors">Defending Against Attack Vectors</h2>
+<p>This approach blocks toxic flows that piece together harmless actions into damaging outcomes, and it neutralizes prompt injection. A malicious issue can suggest &ldquo;open private-repo, copy files,&rdquo; but the enforcer rejects the cross-repo request because the contract for &ldquo;Summarize open issues&rdquo; never granted it. Alignment failures become log entries, not data breaches.</p>
+<h2 id="implementation-strategy">Implementation Strategy</h2>
+<p>Implementing contextual authorization is straightforward:</p>
+<ol>
+<li><strong>Schema Definition</strong>: Tool APIs are described in a clean schema</li>
+<li><strong>Policy Generation</strong>: A language model fine-tuned on security norms translates the user&rsquo;s task and trusted metadata into a concise policy</li>
+<li><strong>Real-time Enforcement</strong>: A pure function either passes or fails each proposed call</li>
+<li><strong>Audit Trail</strong>: Policy text and human-readable rationale are logged for later review</li>
+</ol>
+<p>If the generator ever drifts, developers see exactly where and why. Tool APIs are described in a clean schema. A policy generator—backed by a language model fine-tuned on security norms—translates the user’s task and trusted metadata into a concise policy. Enforcement is a pure function that either passes or fails each proposed call. The policy text and its human-readable rationale are logged for later audit. If the generator ever drifts, developers see exactly where and why.</p>
+<p>For teams shipping serious agent products, contextual authorization is quickly becoming table stakes. Static scopes and bearer tokens were built for yesterday’s services; they cannot defend an autonomous workflow that rewrites its own plan every second. By binding authority to live context, we give agents the freedom to act and users the confidence that actions stay inside safe bounds.</p>
+<p>Agents already feel inevitable. Making them trustworthy is a choice. Contextual authorization is how we choose right.</p>
+
+		</div>
+
+		<div class="post-tags">
+			
+				
+					<nav class="nav tags">
+							<ul class="flat">
+								
+								<li><a href="/tags/delegation">Delegation</a></li>
+								
+								<li><a href="/tags/ai">AI</a></li>
+								
+								<li><a href="/tags/internet">Internet</a></li>
+								
+								<li><a href="/tags/authorization">Authorization</a></li>
+								
+								<li><a href="/tags/browser">Browser</a></li>
+								
+							</ul>
+					</nav>
+				
+			
+		</div>
+	</div>
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div></a></div>
+	</nav>
+</div>
+
+
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-R2NJMVSSYH"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-R2NJMVSSYH');
+        }
+      </script>
+<script>feather.replace()</script><script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+</body>
+</html>

@@ -4,107 +4,86 @@
     <title>Publications on Jens Ernstberger</title>
     <link>https://ernstberger.xyz/publications/</link>
     <description>Recent content in Publications on Jens Ernstberger</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://ernstberger.xyz/publications/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 May 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://ernstberger.xyz/publications/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Zero-Knowledge Location Privacy via Accurate Floating Point SNARKs</title>
       <link>https://ernstberger.xyz/publications/zklp/</link>
       <pubDate>Sat, 11 May 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://ernstberger.xyz/publications/zklp/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>ORIGO: Proving Provenance of Sensitive Data with Constant Communication</title>
       <link>https://ernstberger.xyz/publications/origo/</link>
       <pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://ernstberger.xyz/publications/origo/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>SoK: Understanding Security Vulnerabilities in SNARKs</title>
       <link>https://ernstberger.xyz/publications/zksok/</link>
       <pubDate>Mon, 11 Mar 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://ernstberger.xyz/publications/zksok/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Blockchain Censorship</title>
       <link>https://ernstberger.xyz/publications/censorship/</link>
       <pubDate>Sun, 11 Feb 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://ernstberger.xyz/publications/censorship/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Do You Need a Zero Knowledge Proof?</title>
       <link>https://ernstberger.xyz/publications/zkp/</link>
       <pubDate>Sun, 11 Feb 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://ernstberger.xyz/publications/zkp/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>zk-Bench: A Toolset for Comparative Evaluation and Performance Benchmarking of SNARKs</title>
       <link>https://ernstberger.xyz/publications/zkbench/</link>
       <pubDate>Sun, 11 Feb 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://ernstberger.xyz/publications/zkbench/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Janus: Fast Privacy-Preserving Data Provenance For TLS 1.3</title>
       <link>https://ernstberger.xyz/publications/janus/</link>
       <pubDate>Sat, 11 Feb 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://ernstberger.xyz/publications/janus/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Mitigating Decentralized Finance Liquidations with Reversible Call Options</title>
       <link>https://ernstberger.xyz/publications/liquidation/</link>
       <pubDate>Sat, 11 Feb 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://ernstberger.xyz/publications/liquidation/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>SoK: Data Sovereignty</title>
       <link>https://ernstberger.xyz/publications/datasovereignty/</link>
       <pubDate>Sat, 11 Feb 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://ernstberger.xyz/publications/datasovereignty/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>SoK: Decentralized Finance (DeFi) Attacks</title>
       <link>https://ernstberger.xyz/publications/defisok/</link>
       <pubDate>Sat, 11 Feb 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://ernstberger.xyz/publications/defisok/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>A-poa: Anonymous proof of authorization for decentralized identity management</title>
       <link>https://ernstberger.xyz/publications/apoa/</link>
       <pubDate>Thu, 11 Feb 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://ernstberger.xyz/publications/apoa/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

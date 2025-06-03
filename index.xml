@@ -4,154 +4,128 @@
     <title>Jens Ernstberger</title>
     <link>https://ernstberger.xyz/</link>
     <description>Recent content on Jens Ernstberger</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 16 Feb 2025 10:38:40 +0100</lastBuildDate><atom:link href="https://ernstberger.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 03 Jun 2025 10:38:40 +0100</lastBuildDate>
+    <atom:link href="https://ernstberger.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why Contextual Authorization Is the Missing Layer for Safe AI Agents.</title>
+      <link>https://ernstberger.xyz/posts/04_contextualauth/</link>
+      <pubDate>Tue, 03 Jun 2025 10:38:40 +0100</pubDate>
+      <guid>https://ernstberger.xyz/posts/04_contextualauth/</guid>
+      <description>&lt;p&gt;AI agents no longer live in research papers—they triage email, push code, and spin up cloud resources. Their power is their context awareness, yet that same context can turn against them. A &lt;a href=&#34;https://invariantlabs.ai/blog/mcp-github-vulnerability&#34;&gt;recent exploit&lt;/a&gt; against the GitHub MCP plug-in proved the point: a single issue in a public repo tricked an agent into leaking private code and salary data into a public pull request. Nothing in GitHub&amp;rsquo;s API was broken; the agent simply acted on private context without sufficient guardrails.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Read. Write. Own. Delegate.</title>
-      <link>https://ernstberger.xyz/posts/delegate/</link>
+      <link>https://ernstberger.xyz/posts/03_delegate/</link>
       <pubDate>Sun, 16 Feb 2025 10:38:40 +0100</pubDate>
-      
-      <guid>https://ernstberger.xyz/posts/delegate/</guid>
-      <description>User interfaces are our primary gateway into the digital world. Every login, form completion, or app navigation is designed to demand your direct engagement.</description>
+      <guid>https://ernstberger.xyz/posts/03_delegate/</guid>
+      <description>&lt;p&gt;The early internet was built on a simple truth: collaboration and decentralization make us freer. In those days, the network itself was a shared space - a place where control was distributed.&#xA;Over time, however, the rise in complexity, security demands, and the need for user convenience shifted this balance toward centralization. Social logins leveraging OAuth emerged, enabling users to access multiple services with a single set of credentials from platforms like Facebook, Google, and Twitter - streamlining user experience while further centralizing digital identity management.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Breaking Barriers: Simplifying Decentralized Onboarding</title>
       <link>https://ernstberger.xyz/posts/00_onboarding/</link>
       <pubDate>Tue, 10 Dec 2024 10:38:40 +0100</pubDate>
-      
       <guid>https://ernstberger.xyz/posts/00_onboarding/</guid>
-      <description>Permissionless Blockchains offer a compelling solution for novel applications that operate in a permissionless environment. However, they currently face a daunting dichotomy - although they&amp;rsquo;re permissionless, they&amp;rsquo;re notoriously hard to access.</description>
+      <description>&lt;p&gt;Permissionless Blockchains offer a compelling solution for novel applications that operate in a permissionless environment. However, they currently face a daunting dichotomy - although they&amp;rsquo;re permissionless, they&amp;rsquo;re notoriously hard to access. Whereas applications that are native to blockchains are already decentralized, users are unable to interact with them without first acquiring cryptocurrency from a centralized, trusted exchange. The process is tedious and error-prone - users need to send funds to often sparsely regulated entities from their own bank account. Further, processes often take multiple days, and incur unfavourable exchange rate.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>How to verify Cryptographic Attestation of an AWS Nitro Enclave</title>
       <link>https://ernstberger.xyz/posts/02_awsnitro/</link>
       <pubDate>Mon, 07 Oct 2024 10:38:40 +0100</pubDate>
-      
       <guid>https://ernstberger.xyz/posts/02_awsnitro/</guid>
-      <description>Disclaimer: In case of inaccuracies, please open an issue on Github.
-1. The Necessity of AWS Nitro Cryptographic Attestation In the realm of cloud computing, the assurance of data security and application integrity is of utmost importance.</description>
+      <description>&lt;p&gt;In the realm of cloud computing, the assurance of data security and application integrity is of utmost importance. AWS Nitro Enclaves provide a robust mechanism by creating isolated computing environments specifically designed to safeguard and process highly sensitive information. A pivotal aspect of this security framework is the cryptographic attestation process, which enables external entities to verify the authenticity and integrity of the code and data executing within an enclave.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Zero-Knowledge Location Privacy via Accurate Floating Point SNARKs</title>
       <link>https://ernstberger.xyz/publications/zklp/</link>
       <pubDate>Sat, 11 May 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://ernstberger.xyz/publications/zklp/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>ORIGO: Proving Provenance of Sensitive Data with Constant Communication</title>
       <link>https://ernstberger.xyz/publications/origo/</link>
       <pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://ernstberger.xyz/publications/origo/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>SoK: Understanding Security Vulnerabilities in SNARKs</title>
       <link>https://ernstberger.xyz/publications/zksok/</link>
       <pubDate>Mon, 11 Mar 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://ernstberger.xyz/publications/zksok/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Blockchain Censorship</title>
       <link>https://ernstberger.xyz/publications/censorship/</link>
       <pubDate>Sun, 11 Feb 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://ernstberger.xyz/publications/censorship/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Do You Need a Zero Knowledge Proof?</title>
       <link>https://ernstberger.xyz/publications/zkp/</link>
       <pubDate>Sun, 11 Feb 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://ernstberger.xyz/publications/zkp/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>zk-Bench: A Toolset for Comparative Evaluation and Performance Benchmarking of SNARKs</title>
       <link>https://ernstberger.xyz/publications/zkbench/</link>
       <pubDate>Sun, 11 Feb 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://ernstberger.xyz/publications/zkbench/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Revisiting Elliptic Curves, Recursive SNARKs and Folding Schemes</title>
       <link>https://ernstberger.xyz/posts/01_ellipticcurves/</link>
       <pubDate>Mon, 05 Feb 2024 10:38:40 +0100</pubDate>
-      
       <guid>https://ernstberger.xyz/posts/01_ellipticcurves/</guid>
-      <description>Disclaimer: In case of inaccuracies, please open an issue on Github.
-In recent years, SNARKs proliferated themselves as a potential privacy and scaling solution for permissionless blockchains.</description>
+      <description>&lt;p&gt;In recent years, SNARKs proliferated themselves as a potential privacy and scaling solution for permissionless blockchains.&#xA;However, due to the complexity of underlying cryptography and mathematical constructions, SNARKs are  hard to grasp for application oriented computer scientists and hardware developers.&#xA;In this article, we will give a short introduction to pairing-friendly elliptic curves and how the choice of elliptic curve influences the feasability of constructing a &lt;em&gt;recursive&lt;/em&gt; SNARK, a primitive of primary interest for especially for rollups and incrementally verifiable computation (IVC).&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Janus: Fast Privacy-Preserving Data Provenance For TLS 1.3</title>
       <link>https://ernstberger.xyz/publications/janus/</link>
       <pubDate>Sat, 11 Feb 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://ernstberger.xyz/publications/janus/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Mitigating Decentralized Finance Liquidations with Reversible Call Options</title>
       <link>https://ernstberger.xyz/publications/liquidation/</link>
       <pubDate>Sat, 11 Feb 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://ernstberger.xyz/publications/liquidation/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>SoK: Data Sovereignty</title>
       <link>https://ernstberger.xyz/publications/datasovereignty/</link>
       <pubDate>Sat, 11 Feb 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://ernstberger.xyz/publications/datasovereignty/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>SoK: Decentralized Finance (DeFi) Attacks</title>
       <link>https://ernstberger.xyz/publications/defisok/</link>
       <pubDate>Sat, 11 Feb 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://ernstberger.xyz/publications/defisok/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>About</title>
       <link>https://ernstberger.xyz/about/</link>
       <pubDate>Fri, 23 Dec 2022 15:38:40 +0100</pubDate>
-      
       <guid>https://ernstberger.xyz/about/</guid>
-      <description>I work on the intersection of cryptography and computer security, ideally tackling research problems that have a direct practical impact.</description>
+      <description>&lt;p&gt;I work on the intersection of cryptography and computer security, ideally tackling research problems that have a direct practical impact. Most recently, I was a research intern at &lt;a href=&#34;https://a16zcrypto.com/&#34;&gt;a16z crypto&lt;/a&gt;.&#xA;Previously, I was a PhD student at &lt;a href=&#34;https://www.tum.de/en/&#34;&gt;Technical Univeristy of Munich&lt;/a&gt;, under the supervision of &lt;a href=&#34;https://www.ce.cit.tum.de/en/esi/staff/steinhorst/&#34;&gt;Prof. Sebastian Steinhorst&lt;/a&gt; and &lt;a href=&#34;https://www.arthurgervais.com&#34;&gt;Dr. Arthur Gervais&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;In 2023, I was as a Visiting Researcher at the &lt;a href=&#34;https://simons.berkeley.edu/homepage&#34;&gt;Simons Institute for the Theory of Computing&lt;/a&gt;. In 2022, I was a Visiting Researcher at &lt;a href=&#34;https://www.berkeley.edu/&#34;&gt;University of California, Berkeley&lt;/a&gt; under the supervision of &lt;a href=&#34;https://dawnsong.io/&#34;&gt;Prof. Dawn Song&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>A-poa: Anonymous proof of authorization for decentralized identity management</title>
       <link>https://ernstberger.xyz/publications/apoa/</link>
       <pubDate>Thu, 11 Feb 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://ernstberger.xyz/publications/apoa/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

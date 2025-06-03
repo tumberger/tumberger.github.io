@@ -4,107 +4,93 @@
     <title>Tags on Jens Ernstberger</title>
     <link>https://ernstberger.xyz/tags/</link>
     <description>Recent content in Tags on Jens Ernstberger</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 16 Feb 2025 10:38:40 +0100</lastBuildDate><atom:link href="https://ernstberger.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 03 Jun 2025 10:38:40 +0100</lastBuildDate>
+    <atom:link href="https://ernstberger.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI</title>
       <link>https://ernstberger.xyz/tags/ai/</link>
-      <pubDate>Sun, 16 Feb 2025 10:38:40 +0100</pubDate>
-      
+      <pubDate>Tue, 03 Jun 2025 10:38:40 +0100</pubDate>
       <guid>https://ernstberger.xyz/tags/ai/</guid>
       <description></description>
     </item>
-    
+    <item>
+      <title>Authorization</title>
+      <link>https://ernstberger.xyz/tags/authorization/</link>
+      <pubDate>Tue, 03 Jun 2025 10:38:40 +0100</pubDate>
+      <guid>https://ernstberger.xyz/tags/authorization/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Browser</title>
       <link>https://ernstberger.xyz/tags/browser/</link>
-      <pubDate>Sun, 16 Feb 2025 10:38:40 +0100</pubDate>
-      
+      <pubDate>Tue, 03 Jun 2025 10:38:40 +0100</pubDate>
       <guid>https://ernstberger.xyz/tags/browser/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Delegation</title>
       <link>https://ernstberger.xyz/tags/delegation/</link>
-      <pubDate>Sun, 16 Feb 2025 10:38:40 +0100</pubDate>
-      
+      <pubDate>Tue, 03 Jun 2025 10:38:40 +0100</pubDate>
       <guid>https://ernstberger.xyz/tags/delegation/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Internet</title>
       <link>https://ernstberger.xyz/tags/internet/</link>
-      <pubDate>Sun, 16 Feb 2025 10:38:40 +0100</pubDate>
-      
+      <pubDate>Tue, 03 Jun 2025 10:38:40 +0100</pubDate>
       <guid>https://ernstberger.xyz/tags/internet/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Tech Predictions</title>
       <link>https://ernstberger.xyz/tags/tech-predictions/</link>
       <pubDate>Sun, 16 Feb 2025 10:38:40 +0100</pubDate>
-      
       <guid>https://ernstberger.xyz/tags/tech-predictions/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Elliptic Curves</title>
       <link>https://ernstberger.xyz/tags/elliptic-curves/</link>
       <pubDate>Tue, 10 Dec 2024 10:38:40 +0100</pubDate>
-      
       <guid>https://ernstberger.xyz/tags/elliptic-curves/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Notes</title>
       <link>https://ernstberger.xyz/tags/notes/</link>
       <pubDate>Tue, 10 Dec 2024 10:38:40 +0100</pubDate>
-      
       <guid>https://ernstberger.xyz/tags/notes/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Recursive SNARKs</title>
       <link>https://ernstberger.xyz/tags/recursive-snarks/</link>
       <pubDate>Tue, 10 Dec 2024 10:38:40 +0100</pubDate>
-      
       <guid>https://ernstberger.xyz/tags/recursive-snarks/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Applications</title>
       <link>https://ernstberger.xyz/tags/applications/</link>
       <pubDate>Mon, 07 Oct 2024 10:38:40 +0100</pubDate>
-      
       <guid>https://ernstberger.xyz/tags/applications/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Nitro</title>
       <link>https://ernstberger.xyz/tags/nitro/</link>
       <pubDate>Mon, 07 Oct 2024 10:38:40 +0100</pubDate>
-      
       <guid>https://ernstberger.xyz/tags/nitro/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>TEE</title>
       <link>https://ernstberger.xyz/tags/tee/</link>
       <pubDate>Mon, 07 Oct 2024 10:38:40 +0100</pubDate>
-      
       <guid>https://ernstberger.xyz/tags/tee/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

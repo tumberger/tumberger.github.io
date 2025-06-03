@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Browser on Jens Ernstberger</title>
-    <link>https://ernstberger.xyz/tags/browser/</link>
-    <description>Recent content in Browser on Jens Ernstberger</description>
+    <title>Authorization on Jens Ernstberger</title>
+    <link>https://ernstberger.xyz/tags/authorization/</link>
+    <description>Recent content in Authorization on Jens Ernstberger</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 03 Jun 2025 10:38:40 +0100</lastBuildDate>
-    <atom:link href="https://ernstberger.xyz/tags/browser/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ernstberger.xyz/tags/authorization/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Why Contextual Authorization Is the Missing Layer for Safe AI Agents.</title>
       <link>https://ernstberger.xyz/posts/04_contextualauth/</link>
       <pubDate>Tue, 03 Jun 2025 10:38:40 +0100</pubDate>
       <guid>https://ernstberger.xyz/posts/04_contextualauth/</guid>
       <description>&lt;p&gt;AI agents no longer live in research papers—they triage email, push code, and spin up cloud resources. Their power is their context awareness, yet that same context can turn against them. A &lt;a href=&#34;https://invariantlabs.ai/blog/mcp-github-vulnerability&#34;&gt;recent exploit&lt;/a&gt; against the GitHub MCP plug-in proved the point: a single issue in a public repo tricked an agent into leaking private code and salary data into a public pull request. Nothing in GitHub&amp;rsquo;s API was broken; the agent simply acted on private context without sufficient guardrails.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Read. Write. Own. Delegate.</title>
-      <link>https://ernstberger.xyz/posts/03_delegate/</link>
-      <pubDate>Sun, 16 Feb 2025 10:38:40 +0100</pubDate>
-      <guid>https://ernstberger.xyz/posts/03_delegate/</guid>
-      <description>&lt;p&gt;The early internet was built on a simple truth: collaboration and decentralization make us freer. In those days, the network itself was a shared space - a place where control was distributed.&#xA;Over time, however, the rise in complexity, security demands, and the need for user convenience shifted this balance toward centralization. Social logins leveraging OAuth emerged, enabling users to access multiple services with a single set of credentials from platforms like Facebook, Google, and Twitter - streamlining user experience while further centralizing digital identity management.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -4,37 +4,30 @@
     <title>Notes on Jens Ernstberger</title>
     <link>https://ernstberger.xyz/tags/notes/</link>
     <description>Recent content in Notes on Jens Ernstberger</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Dec 2024 10:38:40 +0100</lastBuildDate><atom:link href="https://ernstberger.xyz/tags/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Dec 2024 10:38:40 +0100</lastBuildDate>
+    <atom:link href="https://ernstberger.xyz/tags/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Breaking Barriers: Simplifying Decentralized Onboarding</title>
       <link>https://ernstberger.xyz/posts/00_onboarding/</link>
       <pubDate>Tue, 10 Dec 2024 10:38:40 +0100</pubDate>
-      
       <guid>https://ernstberger.xyz/posts/00_onboarding/</guid>
-      <description>Permissionless Blockchains offer a compelling solution for novel applications that operate in a permissionless environment. However, they currently face a daunting dichotomy - although they&amp;rsquo;re permissionless, they&amp;rsquo;re notoriously hard to access.</description>
+      <description>&lt;p&gt;Permissionless Blockchains offer a compelling solution for novel applications that operate in a permissionless environment. However, they currently face a daunting dichotomy - although they&amp;rsquo;re permissionless, they&amp;rsquo;re notoriously hard to access. Whereas applications that are native to blockchains are already decentralized, users are unable to interact with them without first acquiring cryptocurrency from a centralized, trusted exchange. The process is tedious and error-prone - users need to send funds to often sparsely regulated entities from their own bank account. Further, processes often take multiple days, and incur unfavourable exchange rate.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>How to verify Cryptographic Attestation of an AWS Nitro Enclave</title>
       <link>https://ernstberger.xyz/posts/02_awsnitro/</link>
       <pubDate>Mon, 07 Oct 2024 10:38:40 +0100</pubDate>
-      
       <guid>https://ernstberger.xyz/posts/02_awsnitro/</guid>
-      <description>Disclaimer: In case of inaccuracies, please open an issue on Github.
-1. The Necessity of AWS Nitro Cryptographic Attestation In the realm of cloud computing, the assurance of data security and application integrity is of utmost importance.</description>
+      <description>&lt;p&gt;In the realm of cloud computing, the assurance of data security and application integrity is of utmost importance. AWS Nitro Enclaves provide a robust mechanism by creating isolated computing environments specifically designed to safeguard and process highly sensitive information. A pivotal aspect of this security framework is the cryptographic attestation process, which enables external entities to verify the authenticity and integrity of the code and data executing within an enclave.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Revisiting Elliptic Curves, Recursive SNARKs and Folding Schemes</title>
       <link>https://ernstberger.xyz/posts/01_ellipticcurves/</link>
       <pubDate>Mon, 05 Feb 2024 10:38:40 +0100</pubDate>
-      
       <guid>https://ernstberger.xyz/posts/01_ellipticcurves/</guid>
-      <description>Disclaimer: In case of inaccuracies, please open an issue on Github.
-In recent years, SNARKs proliferated themselves as a potential privacy and scaling solution for permissionless blockchains.</description>
+      <description>&lt;p&gt;In recent years, SNARKs proliferated themselves as a potential privacy and scaling solution for permissionless blockchains.&#xA;However, due to the complexity of underlying cryptography and mathematical constructions, SNARKs are  hard to grasp for application oriented computer scientists and hardware developers.&#xA;In this article, we will give a short introduction to pairing-friendly elliptic curves and how the choice of elliptic curve influences the feasability of constructing a &lt;em&gt;recursive&lt;/em&gt; SNARK, a primitive of primary interest for especially for rollups and incrementally verifiable computation (IVC).&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

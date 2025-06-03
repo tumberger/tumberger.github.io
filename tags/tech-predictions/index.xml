@@ -4,17 +4,16 @@
     <title>Tech Predictions on Jens Ernstberger</title>
     <link>https://ernstberger.xyz/tags/tech-predictions/</link>
     <description>Recent content in Tech Predictions on Jens Ernstberger</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 16 Feb 2025 10:38:40 +0100</lastBuildDate><atom:link href="https://ernstberger.xyz/tags/tech-predictions/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 16 Feb 2025 10:38:40 +0100</lastBuildDate>
+    <atom:link href="https://ernstberger.xyz/tags/tech-predictions/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Read. Write. Own. Delegate.</title>
-      <link>https://ernstberger.xyz/posts/delegate/</link>
+      <link>https://ernstberger.xyz/posts/03_delegate/</link>
       <pubDate>Sun, 16 Feb 2025 10:38:40 +0100</pubDate>
-      
-      <guid>https://ernstberger.xyz/posts/delegate/</guid>
-      <description>User interfaces are our primary gateway into the digital world. Every login, form completion, or app navigation is designed to demand your direct engagement.</description>
+      <guid>https://ernstberger.xyz/posts/03_delegate/</guid>
+      <description>&lt;p&gt;The early internet was built on a simple truth: collaboration and decentralization make us freer. In those days, the network itself was a shared space - a place where control was distributed.&#xA;Over time, however, the rise in complexity, security demands, and the need for user convenience shifted this balance toward centralization. Social logins leveraging OAuth emerged, enabling users to access multiple services with a single set of credentials from platforms like Facebook, Google, and Twitter - streamlining user experience while further centralizing digital identity management.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

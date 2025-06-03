@@ -4,46 +4,44 @@
     <title>Posts on Jens Ernstberger</title>
     <link>https://ernstberger.xyz/posts/</link>
     <description>Recent content in Posts on Jens Ernstberger</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 16 Feb 2025 10:38:40 +0100</lastBuildDate><atom:link href="https://ernstberger.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 03 Jun 2025 10:38:40 +0100</lastBuildDate>
+    <atom:link href="https://ernstberger.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why Contextual Authorization Is the Missing Layer for Safe AI Agents.</title>
+      <link>https://ernstberger.xyz/posts/04_contextualauth/</link>
+      <pubDate>Tue, 03 Jun 2025 10:38:40 +0100</pubDate>
+      <guid>https://ernstberger.xyz/posts/04_contextualauth/</guid>
+      <description>&lt;p&gt;AI agents no longer live in research papers—they triage email, push code, and spin up cloud resources. Their power is their context awareness, yet that same context can turn against them. A &lt;a href=&#34;https://invariantlabs.ai/blog/mcp-github-vulnerability&#34;&gt;recent exploit&lt;/a&gt; against the GitHub MCP plug-in proved the point: a single issue in a public repo tricked an agent into leaking private code and salary data into a public pull request. Nothing in GitHub&amp;rsquo;s API was broken; the agent simply acted on private context without sufficient guardrails.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Read. Write. Own. Delegate.</title>
-      <link>https://ernstberger.xyz/posts/delegate/</link>
+      <link>https://ernstberger.xyz/posts/03_delegate/</link>
       <pubDate>Sun, 16 Feb 2025 10:38:40 +0100</pubDate>
-      
-      <guid>https://ernstberger.xyz/posts/delegate/</guid>
-      <description>User interfaces are our primary gateway into the digital world. Every login, form completion, or app navigation is designed to demand your direct engagement.</description>
+      <guid>https://ernstberger.xyz/posts/03_delegate/</guid>
+      <description>&lt;p&gt;The early internet was built on a simple truth: collaboration and decentralization make us freer. In those days, the network itself was a shared space - a place where control was distributed.&#xA;Over time, however, the rise in complexity, security demands, and the need for user convenience shifted this balance toward centralization. Social logins leveraging OAuth emerged, enabling users to access multiple services with a single set of credentials from platforms like Facebook, Google, and Twitter - streamlining user experience while further centralizing digital identity management.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Breaking Barriers: Simplifying Decentralized Onboarding</title>
       <link>https://ernstberger.xyz/posts/00_onboarding/</link>
       <pubDate>Tue, 10 Dec 2024 10:38:40 +0100</pubDate>
-      
       <guid>https://ernstberger.xyz/posts/00_onboarding/</guid>
-      <description>Permissionless Blockchains offer a compelling solution for novel applications that operate in a permissionless environment. However, they currently face a daunting dichotomy - although they&amp;rsquo;re permissionless, they&amp;rsquo;re notoriously hard to access.</description>
+      <description>&lt;p&gt;Permissionless Blockchains offer a compelling solution for novel applications that operate in a permissionless environment. However, they currently face a daunting dichotomy - although they&amp;rsquo;re permissionless, they&amp;rsquo;re notoriously hard to access. Whereas applications that are native to blockchains are already decentralized, users are unable to interact with them without first acquiring cryptocurrency from a centralized, trusted exchange. The process is tedious and error-prone - users need to send funds to often sparsely regulated entities from their own bank account. Further, processes often take multiple days, and incur unfavourable exchange rate.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>How to verify Cryptographic Attestation of an AWS Nitro Enclave</title>
       <link>https://ernstberger.xyz/posts/02_awsnitro/</link>
       <pubDate>Mon, 07 Oct 2024 10:38:40 +0100</pubDate>
-      
       <guid>https://ernstberger.xyz/posts/02_awsnitro/</guid>
-      <description>Disclaimer: In case of inaccuracies, please open an issue on Github.
-1. The Necessity of AWS Nitro Cryptographic Attestation In the realm of cloud computing, the assurance of data security and application integrity is of utmost importance.</description>
+      <description>&lt;p&gt;In the realm of cloud computing, the assurance of data security and application integrity is of utmost importance. AWS Nitro Enclaves provide a robust mechanism by creating isolated computing environments specifically designed to safeguard and process highly sensitive information. A pivotal aspect of this security framework is the cryptographic attestation process, which enables external entities to verify the authenticity and integrity of the code and data executing within an enclave.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Revisiting Elliptic Curves, Recursive SNARKs and Folding Schemes</title>
       <link>https://ernstberger.xyz/posts/01_ellipticcurves/</link>
       <pubDate>Mon, 05 Feb 2024 10:38:40 +0100</pubDate>
-      
       <guid>https://ernstberger.xyz/posts/01_ellipticcurves/</guid>
-      <description>Disclaimer: In case of inaccuracies, please open an issue on Github.
-In recent years, SNARKs proliferated themselves as a potential privacy and scaling solution for permissionless blockchains.</description>
+      <description>&lt;p&gt;In recent years, SNARKs proliferated themselves as a potential privacy and scaling solution for permissionless blockchains.&#xA;However, due to the complexity of underlying cryptography and mathematical constructions, SNARKs are  hard to grasp for application oriented computer scientists and hardware developers.&#xA;In this article, we will give a short introduction to pairing-friendly elliptic curves and how the choice of elliptic curve influences the feasability of constructing a &lt;em&gt;recursive&lt;/em&gt; SNARK, a primitive of primary interest for especially for rollups and incrementally verifiable computation (IVC).&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

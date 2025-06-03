@@ -2,30 +2,38 @@
 <html>
 <head>
 	
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'G-R2NJMVSSYH', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-R2NJMVSSYH"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-R2NJMVSSYH');
+        }
+      </script>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1"><title>Revisiting Elliptic Curves, Recursive SNARKs and Folding Schemes - Jens Ernstberger</title><link rel="icon" type="image/png" href="icons/test.png" /><meta property="og:title" content="Revisiting Elliptic Curves, Recursive SNARKs and Folding Schemes" />
-<meta property="og:description" content="Disclaimer: In case of inaccuracies, please open an issue on Github.
-In recent years, SNARKs proliferated themselves as a potential privacy and scaling solution for permissionless blockchains." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://ernstberger.xyz/posts/01_ellipticcurves/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-02-05T10:38:40+01:00" />
-<meta property="article:modified_time" content="2024-02-05T10:38:40+01:00" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Revisiting Elliptic Curves, Recursive SNARKs and Folding Schemes"/>
-<meta name="twitter:description" content="Disclaimer: In case of inaccuracies, please open an issue on Github.
-In recent years, SNARKs proliferated themselves as a potential privacy and scaling solution for permissionless blockchains."/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"><title>Revisiting Elliptic Curves, Recursive SNARKs and Folding Schemes - Jens Ernstberger</title><link rel="icon" type="image/png" href="icons/test.png" /><meta property="og:url" content="https://ernstberger.xyz/posts/01_ellipticcurves/">
+  <meta property="og:site_name" content="Jens Ernstberger">
+  <meta property="og:title" content="Revisiting Elliptic Curves, Recursive SNARKs and Folding Schemes">
+  <meta property="og:description" content="In recent years, SNARKs proliferated themselves as a potential privacy and scaling solution for permissionless blockchains. However, due to the complexity of underlying cryptography and mathematical constructions, SNARKs are hard to grasp for application oriented computer scientists and hardware developers. In this article, we will give a short introduction to pairing-friendly elliptic curves and how the choice of elliptic curve influences the feasability of constructing a recursive SNARK, a primitive of primary interest for especially for rollups and incrementally verifiable computation (IVC).">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-02-05T10:38:40+01:00">
+    <meta property="article:modified_time" content="2024-02-05T10:38:40+01:00">
+    <meta property="article:tag" content="Notes">
+    <meta property="article:tag" content="Elliptic Curves">
+    <meta property="article:tag" content="Recursive SNARKs">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Revisiting Elliptic Curves, Recursive SNARKs and Folding Schemes">
+  <meta name="twitter:description" content="In recent years, SNARKs proliferated themselves as a potential privacy and scaling solution for permissionless blockchains. However, due to the complexity of underlying cryptography and mathematical constructions, SNARKs are hard to grasp for application oriented computer scientists and hardware developers. In this article, we will give a short introduction to pairing-friendly elliptic curves and how the choice of elliptic curve influences the feasability of constructing a recursive SNARK, a primitive of primary interest for especially for rollups and incrementally verifiable computation (IVC).">
 <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
 
 	<link rel="stylesheet" type="text/css" media="screen" href="https://ernstberger.xyz/css/normalize.css" />
@@ -95,8 +103,7 @@ In recent years, SNARKs proliferated themselves as a potential privacy and scali
 		</div>
 
 		<div class="markdown">
-			<p><em>Disclaimer: In case of inaccuracies, please open an issue on <a href="https://github.com/tumberger/tumberger.github.io">Github</a>.</em></p>
-<p>In recent years, SNARKs proliferated themselves as a potential privacy and scaling solution for permissionless blockchains.
+			<p>In recent years, SNARKs proliferated themselves as a potential privacy and scaling solution for permissionless blockchains.
 However, due to the complexity of underlying cryptography and mathematical constructions, SNARKs are  hard to grasp for application oriented computer scientists and hardware developers.
 In this article, we will give a short introduction to pairing-friendly elliptic curves and how the choice of elliptic curve influences the feasability of constructing a <em>recursive</em> SNARK, a primitive of primary interest for especially for rollups and incrementally verifiable computation (IVC).</p>
 <h2 id="1-mathematical-background"><strong>1. Mathematical Background</strong></h2>
@@ -116,8 +123,6 @@ This efficient computation is crucial in applications like recursive SNARKs, whe
 The most common elliptic curves used in cryptographic applications, particularly in the context of pairings and advanced cryptographic protocols, are the BN254 and BLS12-381 curves.
 Whereas BN254 is defined over a 256-bits prime field, BLS12-381 is defined over a 381-bits prime field.
 Due to a larger prime field, BLS12-381 is ought to be more secure, whereas operations like Scalar Multiplication are also less efficient (see e.g. practical benchmarks in <a href="https://eprint.iacr.org/2023/1503.pdf">our paper</a>).</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
 <h2 id="2-recursion-and-incrementally-verifiable-computation"><strong>2. Recursion and Incrementally Verifiable Computation</strong></h2>
 <h3 id="21-incrementally-verifiable-computation">2.1 Incrementally Verifiable Computation</h3>
 <p>Incrementally Verifiable Computation (IVC) targets the verification of long-running computations.
@@ -125,7 +130,6 @@ Initially, this concept was introduced by Valiant in 2008 <a href="https://cites
 Formally, an IVC proof proves tha the \(i\)-th step of a computation was executed correctly, and there exists a proof that the computation was executed correctly for all \(i − 1\) previous steps, i.e. it holds that \(F(z_{i-1}) = z_i\), where \(F\) is the function applied at the  \(i\)-th step, and there exists a proof \(\pi_{i-1}\) that attests to the correctness of \(z_{i-1}\).</p>
 <p><img src="../images/IVC.jpg" alt="Alternative Text">
 <em><strong>Figure 1: Visualization of Incrementally Verifiable Computation</strong></em></p>
-<!-- raw HTML omitted -->
 <h3 id="22-recursion-overhead">2.2 Recursion Overhead</h3>
 <p>Now, the overhead of recursive verification is simple - at each step, the prover needs to additionally verify the previous proof, i.e. the relation includes the circuit to be proven AND the circuit for verifiying the proof produced in the previous step.
 Hence, inital proposals for recursive SNARKs relied on state-of-the-art succinct SNARKs, where the verification involves only a minimal amount of operations (to minimize the recursion overhead).
@@ -136,7 +140,7 @@ One could choose an elliptic curve \(E\) where \(q = r\) , but this yields a tri
 <h3 id="23-practical-recursion-over-cycles-and-2-chains-of-elliptic-curves">2.3 Practical Recursion over Cycles and 2-Chains of Elliptic Curves</h3>
 <p>Practical solutions circumvent this caveat by leveraging <em>cycles of elliptic curves</em>, as first demonstrated by Ben-Sasson et. al <a href="https://link.springer.com/article/10.1007/s00453-016-0221-0">BCTV14a</a>.
 This approaches leverage the fact that for the cycles of applied elliptic curves, the base field of either curve is the scalar field of the other.
-However, only curves MNT4/6 (of embedding degree 4 or 6) achieve this property, which requires the use of large fields \(~(&raquo; r~)\) to achieve adequate security.
+However, only curves MNT4/6 (of embedding degree 4 or 6) achieve this property, which requires the use of large fields \(<del>(&raquo; r</del>)\) to achieve adequate security.
 In <a href="https://eprint.iacr.org/2018/962.pdf?ref=hackernoon.com">ZEXE</a>, the authors circumvent this issue by constructing new curves (BLS12-377/ CP6-782, cmp. Fig.16 in <a href="https://eprint.iacr.org/2018/962.pdf?ref=hackernoon.com">ZEXE</a>), which form a chain rather than a cycle - hence, only the base field of one curve is equivalent to the scalar field of the other, but not the other way around.
 A similar approach has been taken in <a href="https://eprint.iacr.org/2022/1286.pdf">Zebra</a>, which instantiates the inner SNARK with discrete log based <a href="https://eprint.iacr.org/2019/550.pdf">Spartan</a> over the <a href="https://hackmd.io/@aztec-network/ByzgNxBfd">Grumpkin Curve</a> and the outer SNARK with <a href="https://eprint.iacr.org/2016/260.pdf">Groth16</a> over BN254. BN254 and Grumpkin form a cycle of elliptic curves and hence faciliate recursion without the need for emulation of non-native arithmetic. BN254 has pre-compiles on Ethereum, and hence proofs can be verified efficiently in a smart contract.
 Recent work has further <a href="https://hal.inria.fr/hal-03371573/document">shown</a> that the BLS12 and BLS24 based families can be tailored for Groth’16 and KZG-based SNARKs recursive proof composition.</p>
@@ -146,7 +150,6 @@ Further, pairing-based SNARKs involve a verification algorithm that relies on op
 <p>Weakening the requirement of sublinear-time verifier SNARKs led to the development of recursive arguments of knowledge from <em>accumulation schemes</em> (<a href="https://eprint.iacr.org/2020/1618.pdf">BCLMS20</a>, <a href="https://eprint.iacr.org/2021/370.pdf">Nova</a>).
 At a high-level, an accumulation scheme requires the SNARK to be accompanied by an “accumulator“  that is updated at each recursion step and enables “postponing” the verification of SNARK proofs to the last step in the recursive chain of arguments (Benedikt Bunz covers the BCLMS20 construction for split-accumulation in detail in <a href="https://www.youtube.com/watch?v=CY84j0_E7KA">this presentation</a>).
 In the following, we will skip a bunch of related works that construct IVC from <em>atomic</em> accumulation as they still require SNARKs with sublinear verification, and further FFT-friendly cycles of elliptic curves (<a href="https://iacr.org/archive/tcc2020/12550115/12550115.pdf">BCMS20</a>, <a href="https://eprint.iacr.org/2020/1536.pdf">Halo</a>).</p>
-<!-- raw HTML omitted -->
 <h3 id="nova---an-argument-system-based-on-a-folding-scheme-without-the-requirement-for-succinct-arguments">NOVA - An argument system based on a folding scheme without the requirement for Succinct Arguments</h3>
 <p>In the following, consider that \(F\) describes the relation that we want to prove at each step (i.e., Nova describes <em>uniform</em> IVC, where the computation at each step is the same).
 Nova relies on a variant fo R1CS for arithmetization, hence recall that an R1CS instance is defined as \(A,B,C \in \mathbb{F}^{n \times n}\) such that \(F(x)=y\) iff there exists a vector \(z \coloneqq (x,y,w)\) for a witness \(w\) such that \( (A \cdot z) \circ (B \cdot z) = C \cdot z \). Note, that \(\cdot\) denotes the matrix-vector product and \(\circ\) denotes the entrywise (&ldquo;Hadamard&rdquo;) product.
@@ -157,7 +160,6 @@ Each iterative step thereby does not compute the verification of the previous pr
 Rather, Nova levereages the additive homomorphism of additively homomorphic vector commitments (i.e. Pedersen Vector Commitment) to defer the verification until the last step.</p>
 <h4 id="folding-scheme">Folding Scheme</h4>
 <p>In principle, a folding scheme is rather trivial to construct. As you will see, opposing to the common belief that binomial eqquations are useless after high school, they are quite helpful to construct a folding scheme!</p>
-<!-- raw HTML omitted -->
 <p>At a high-level, a folding scheme leverages nothing besides the fact that one can combine tow algebraic R1CS instances \(z_1 \coloneqq (x_1,1,w_1)\) and \(z_2 \coloneqq (x_2,1,w_2)\) by computing their random linear combination (with a small quirk to account for errors).
 Now, we first show (i) the need for an error vector and (ii) how to use <em>cross-terms</em> as a valid error vector to enforce soundness of the argument system.</p>
 <p><strong>(i) Naive Approach.</strong>
@@ -190,18 +192,7 @@ It remains to construct a concrete scheme that provides IVC, by combining the fo
 For conciseness of this blogpost, we defer the construction of the argument of knowledge and refer to <a href="https://eprint.iacr.org/2021/370.pdf">Nova</a> for more details.</p>
 <h2 id="4-why-care-about-ivc-and-recursive-snarks"><strong>4. Why care about IVC and Recursive SNARKs?</strong></h2>
 <p>Incrementally Verifiable Computation (IVC) holds particular practical significance by enabling the efficient and scalable verification of extensive and multifaceted computational tasks through a step-by-step approach. Unlike traditional methods that require revalidating entire computations, IVC allows each incremental step to be independently verified, substantially reducing the computational burden on verifiers. This capability is especially crucial in applications like the <a href="https://eprint.iacr.org/2024/1436.pdf">Eva protocol for video authenticity</a>, where processing involves numerous operations on individual macroblocks. By integrating verification seamlessly into each stage of the computation, IVC ensures both the integrity and correctness of the process without incurring prohibitive costs. This makes IVC an indispensable tool for deploying robust cryptographic protocols in real-world systems where performance and scalability are paramount.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<p><em>Disclaimer: In case of inaccuracies, please open an issue on <a href="https://github.com/tumberger/tumberger.github.io">Github</a>.</em></p>
 
 		</div>
 
@@ -231,17 +222,20 @@ For conciseness of this blogpost, we defer the construction of the argument of k
 
 
 
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'G-R2NJMVSSYH', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-R2NJMVSSYH"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-R2NJMVSSYH');
+        }
+      </script>
 <script>feather.replace()</script><script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
